@@ -70,13 +70,11 @@ export function LandingBooking() {
         <CalendarDays size={29} />
         <h2 id="quick-booking-title">
           Book Your
-          <br />
-          Horse Riding
+          <br /> Horse Riding
         </h2>
         <p>
           Plan your next ride
-          <br />
-          directly on WhatsApp.
+          <br /> directly on WhatsApp.
         </p>
       </div>
       {preparedUrl ? (
@@ -245,8 +243,7 @@ export default function Landing() {
             </p>
             <h1>
               Horse Riding
-              <br />
-              in Sharjah
+              <br /> in Sharjah
             </h1>
             <h2>Classes · Lessons · Stable Services · Horse Trading</h2>
             <p>
@@ -372,8 +369,7 @@ export default function Landing() {
           <p className="reference-eyebrow">HOW IT WORKS</p>
           <h2>
             Book Your Ride
-            <br />
-            in 3 Simple Steps
+            <br /> in 3 Simple Steps
           </h2>
           <p>A little planning. A wonderful experience to look forward to.</p>
         </div>
@@ -411,8 +407,7 @@ export default function Landing() {
           <p className="reference-eyebrow">FROM OUR RIDERS</p>
           <h2>
             A Shared Love
-            <br />
-            of Horses
+            <br /> of Horses
           </h2>
           <p>Good moments deserve to be remembered.</p>
         </div>
@@ -434,8 +429,8 @@ export default function Landing() {
               <h3>Your ride. Your story.</h3>
               <p>
                 Already ridden with Sky Stable? Share your experience with us.
-                <br />
-                Customer stories will appear here once shared with permission.
+                <br /> Customer stories will appear here once shared with
+                permission.
               </p>
             </div>
             <WhatsApp
@@ -453,8 +448,7 @@ export default function Landing() {
           <p className="reference-eyebrow">GALLERY</p>
           <h2>
             Moments at
-            <br />
-            Sky Stable
+            <br /> Sky Stable
           </h2>
           <p>A little inspiration for your next equestrian adventure.</p>
           <Link to="/gallery" className="button">

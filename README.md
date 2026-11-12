@@ -41,7 +41,7 @@ Tests cover Dubai date rollover, past dates/times, impossible dates, rider total
 4. Add only verified opening hours, social profiles, trainer biographies, reviews and genuine sale listings. Empty values are intentionally omitted or shown as honest empty states.
 5. Preview desktop and mobile, then complete a real test request with the business owner: prepare the message, inspect the recipient, tap Send yourself in WhatsApp, and confirm receipt with Sky Stable.
 
-**Verification limit:** the connected browser failed before it could load the local site during this build session. Automated DOM interaction tests and generated-page checks are included; real-browser visual layout, touch gestures, popup behavior and Core Web Vitals still need a manual pass. No performance scores are claimed.
+**Verification:** automated interaction tests and generated-page checks pass. The published redesign was visually reviewed using full-page desktop (1440px) and mobile (390px) screenshots. The local Chrome control connection remains unavailable, so real-device touch gestures and popup behavior still need a manual pass. No Core Web Vitals scores are claimed.
 
 ## Owner settings: one place for business details
 

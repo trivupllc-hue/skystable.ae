@@ -30,4 +30,4 @@ The homepage form validates required contact fields, total riders and future dat
 
 Desktop uses six service columns; tablet uses three; mobile uses two. The booking panel stacks on mobile, and the gallery strip scrolls horizontally. FAQ controls expose their expanded state and connect to their answer panels.
 
-The local browser connector is unavailable. Automated form tests and generated-page checks cover behavior and assets. Live screenshot checks, when available, are performed separately through the public site.
+The local browser connector is unavailable. All 21 automated form and business-rule tests passed, as did generated-page checks for 14 routes. Full-page desktop (1440px) and mobile (390px) screenshots were reviewed through Firecrawl on the public site. A mobile heading-spacing issue found during that review was corrected. Real-device touch and popup behavior remain unverified.

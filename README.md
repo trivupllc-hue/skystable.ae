@@ -95,7 +95,17 @@ Edit `src/data/horses.ts`. It starts with an empty array to avoid fictitious hor
 - The site does not store enquiries. Form details exist in page memory and are passed to WhatsApp only during the handoff. Refreshing or leaving the page can clear them.
 - For stable or trading enquiries, the booking form explains how to use one adult as the person enquiring. The dedicated horse-selling form collects horse details instead.
 
-## Upload to GitHub
+## GitHub repository
+
+The source is published at **https://github.com/trivupllc-hue/skystable.ae** on the `main` branch. This local checkout is already connected to that repository. After editing files, publish updates with:
+
+```sh
+git add .
+git commit -m "Update Sky Stable website"
+git push
+```
+
+### Initial setup for a new checkout
 
 Create an empty repository in your GitHub account (without auto-adding a README or license). Then run these commands from this project directory, replacing the URL with your repository URL:
 
@@ -104,7 +114,7 @@ git init
 git add .
 git commit -m "Build Sky Stable website"
 git branch -M main
-git remote add origin https://github.com/YOUR_ACCOUNT/YOUR_REPOSITORY.git
+git remote add origin https://github.com/trivupllc-hue/skystable.ae.git
 git push -u origin main
 ```
 

@@ -10,6 +10,7 @@ import {
 import { Link, MemoryRouter, Route, Routes } from "react-router-dom";
 import Layout from "../src/components/Layout";
 import { BookingPage } from "../src/components/Booking";
+import { LandingBooking } from "../src/components/Landing";
 import { TradingPage } from "../src/components/Trading";
 import { GalleryPage } from "../src/components/Gallery";
 import { FAQ } from "../src/components/Sections";
@@ -37,6 +38,54 @@ function booking(path = "/book") {
     </MemoryRouter>,
   );
 }
+describe("Homepage booking", () => {
+  it("keeps incomplete enquiries on the page", async () => {
+    render(<LandingBooking />);
+    fireEvent.click(screen.getByRole("button", { name: "Book on WhatsApp" }));
+    await waitFor(() =>
+      expect(screen.getAllByRole("alert").length).toBeGreaterThan(0),
+    );
+    expect(window.open).not.toHaveBeenCalled();
+  });
+  it("prepares the supplied details without inventing rider ages, and keeps them when editing", async () => {
+    render(<LandingBooking />);
+    fireEvent.change(screen.getByLabelText(/Ride type/), {
+      target: { value: "Beach Horse Riding" },
+    });
+    fireEvent.change(screen.getByLabelText(/^Date/), {
+      target: { value: "2099-12-30" },
+    });
+    fireEvent.change(screen.getByLabelText(/Time · UAE/), {
+      target: { value: "07:00" },
+    });
+    fireEvent.change(screen.getByLabelText(/^Riders/), {
+      target: { value: "3" },
+    });
+    fireEvent.change(screen.getByLabelText(/Your name/), {
+      target: { value: "Rider & Family" },
+    });
+    fireEvent.change(screen.getByLabelText(/Mobile \/ WhatsApp/), {
+      target: { value: "+971501234567" },
+    });
+    fireEvent.click(screen.getByRole("button", { name: "Book on WhatsApp" }));
+    await waitFor(() => expect(window.open).toHaveBeenCalledOnce());
+    const draft = new URL(
+      screen
+        .getByRole("link", { name: /Continue to WhatsApp/ })
+        .getAttribute("href")!,
+    );
+    expect(draft.pathname).toBe("/" + site.whatsappNumber);
+    expect(draft.searchParams.get("text")).toContain("Total riders: 3");
+    expect(draft.searchParams.get("text")).toContain("Rider & Family");
+    expect(draft.searchParams.get("text")).toContain("Beach Horse Riding");
+    expect(draft.searchParams.get("text")).not.toContain("3 adults");
+    expect(screen.getByText(/Tap Send in WhatsApp/)).toBeTruthy();
+    fireEvent.click(screen.getByRole("button", { name: "Edit request" }));
+    expect((screen.getByLabelText(/Your name/) as HTMLInputElement).value).toBe(
+      "Rider & Family",
+    );
+  });
+});
 describe("Booking form integration", () => {
   it("preselects service and package notes from the CTA", () => {
     booking("/book?service=Beach+Horse+Riding&notes=Beach+package");

@@ -1,0 +1,1207 @@
+/* Owner-selected black, ivory and sunset-gold visual direction. */
+.site-header {
+  position: relative;
+  z-index: 30;
+  background: linear-gradient(105deg, #101010, #191917 70%, #0d0d0d);
+}
+.header-main {
+  height: 105px;
+  gap: 24px;
+  width: min(1320px, calc(100% - 64px));
+}
+.logo .brand-logo {
+  width: 176px;
+  height: 88px;
+  object-fit: contain;
+}
+.header-main nav {
+  gap: clamp(14px, 1.6vw, 25px);
+  justify-content: center;
+}
+.header-main nav a {
+  font-size: 12px;
+  color: #fffdf7;
+}
+.header-main nav a:after {
+  height: 3px;
+  bottom: 1px;
+}
+.header-contact-actions {
+  display: flex;
+  gap: 8px;
+}
+.header-contact {
+  border: 1px solid #e3b946;
+  border-radius: 7px;
+  min-height: 39px;
+  padding: 8px 11px;
+  color: #f7d76e;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  font-size: 12px;
+}
+.header-contact:hover {
+  background: #e6b73920;
+}
+.header-main .header-book {
+  background: linear-gradient(#ffe699, #edb735);
+  border: 1px solid #f1cf76;
+  color: #111;
+  border-radius: 8px;
+  font-size: 12px;
+  min-height: 40px;
+  gap: 7px;
+  padding: 10px 14px;
+  box-shadow: 0 2px 7px #0002;
+}
+.header-book > svg:last-child {
+  display: none;
+}
+.site-footer {
+  padding-top: 35px;
+  background:
+    radial-gradient(ellipse at 95% 110%, #a66a1730, transparent 42%), #111210;
+}
+.footer-main {
+  gap: 36px;
+  padding-bottom: 30px;
+}
+.footer-main > div:not(:first-child) {
+  border-left: 1px solid #a7884550;
+  padding-left: 30px;
+}
+.footer-main h3 {
+  color: #fffdf5;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+.footer-main > div:not(.footer-brand) > a {
+  font-size: 12px;
+  margin: 10px 0;
+}
+.footer-brand > p {
+  margin: 8px 0 12px;
+}
+.footer-bottom {
+  padding-top: 16px;
+  font-size: 10px;
+}
+.demo-note {
+  font-size: 10px;
+  padding-top: 12px;
+  padding-bottom: 20px;
+}
+.reference-home {
+  color: #171611;
+  background:
+    radial-gradient(ellipse at 6% 28%, #f4dfbb70, transparent 32%),
+    radial-gradient(ellipse at 96% 65%, #f3dfc970, transparent 36%), #faf4ec;
+}
+.reference-home h1,
+.reference-home h2,
+.reference-home h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 700;
+}
+.reference-home .shell {
+  width: min(1280px, calc(100% - 72px));
+}
+.reference-home .button {
+  background: linear-gradient(180deg, #ffe298, #f4c650 55%, #eab438);
+  border: 1px solid #e3b650;
+  border-radius: 13px;
+  color: #15140f;
+  box-shadow: 0 3px 7px #9f702325;
+  gap: 12px;
+  min-height: 43px;
+  padding: 10px 22px;
+  font-size: 13px;
+}
+.reference-home .button:hover {
+  background: linear-gradient(#ffeab0, #f2c153);
+  transform: translateY(-2px);
+}
+.reference-home .button-outline {
+  background: transparent;
+  box-shadow: none;
+  color: #4d3616;
+}
+.reference-eyebrow {
+  color: #946008;
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: 600;
+  line-height: 1.6;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.reference-section-title .reference-eyebrow {
+  justify-content: center;
+}
+.reference-section-title .reference-eyebrow:before,
+.reference-section-title .reference-eyebrow:after {
+  content: "";
+  height: 1px;
+  width: 40px;
+  background: #cb9c41;
+}
+.reference-hero {
+  position: relative;
+  background: #e8c59a;
+  isolation: isolate;
+  padding-bottom: 30px;
+}
+.reference-hero:after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  height: 29px;
+  width: 100%;
+  background: #faf4ec;
+  clip-path: polygon(
+    0 32%,
+    12% 86%,
+    40% 100%,
+    75% 94%,
+    100% 34%,
+    100% 100%,
+    0 100%
+  );
+  pointer-events: none;
+}
+.reference-hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 46%;
+  z-index: -2;
+}
+.reference-hero-wash {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 43%, #fff0d42b 57%, #fff2da24);
+  z-index: -1;
+}
+.reference-hero-inner {
+  padding-top: 30px;
+}
+.reference-hero-copy {
+  margin-left: 52%;
+  min-height: 370px;
+  padding-bottom: 30px;
+}
+.reference-hero-copy .reference-eyebrow {
+  color: #fff7da;
+  text-shadow: 0 1px 6px #5c351a;
+  letter-spacing: 2.6px;
+  font-size: 12px;
+}
+.reference-hero h1 {
+  font-style: italic;
+  font-size: clamp(47px, 5.2vw, 78px);
+  letter-spacing: -2.5px;
+  line-height: 1.03;
+  margin: 10px 0 15px;
+}
+.reference-hero-copy h2 {
+  font-size: clamp(16px, 1.5vw, 22px);
+  line-height: 1.35;
+  margin-bottom: 12px;
+}
+.reference-hero-copy > p:not(.reference-eyebrow) {
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: 510px;
+  margin-bottom: 20px;
+}
+.reference-hero-copy > .button {
+  min-height: 47px;
+  font-size: 15px;
+  border-radius: 22px;
+  padding-inline: 28px;
+}
+.reference-image-caption {
+  position: absolute;
+  left: 18px;
+  bottom: 9px;
+  font-size: 8px;
+  color: #54412d;
+  z-index: 1;
+}
+.compact-booking {
+  width: 94%;
+  margin: 0 auto;
+  background: linear-gradient(110deg, #161714f5, #0e100ef5);
+  border: 2px solid #ecd482;
+  box-shadow:
+    0 9px 25px #3c271b40,
+    inset 0 1px 0 #ffffff20;
+  border-radius: 24px;
+  padding: 22px 28px;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 28px;
+  color: #fff;
+  scroll-margin-top: 30px;
+}
+.compact-booking-heading {
+  align-self: center;
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  align-items: start;
+  gap: 10px;
+  border-right: 1px solid #d6b36770;
+  padding-right: 20px;
+}
+.compact-booking-heading > svg {
+  color: #f5ca53;
+}
+.compact-booking-heading h2 {
+  font-size: 24px;
+  line-height: 1.1;
+}
+.compact-booking-heading p {
+  grid-column: 1 / -1;
+  font-size: 13px;
+  line-height: 1.5;
+  margin-top: 8px;
+}
+.compact-booking form {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 9px 13px;
+}
+.compact-booking label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 11px;
+  line-height: 1.3;
+  font-weight: 600;
+  min-width: 0;
+}
+.compact-booking input,
+.compact-booking select {
+  width: 100%;
+  min-width: 0;
+  height: 37px;
+  min-height: 37px;
+  padding: 7px 9px;
+  background: linear-gradient(#fff, #f1f1ef);
+  color: #26251f;
+  border: 1px solid #d9d5cb;
+  border-radius: 6px;
+  font-size: 12px;
+  line-height: 1.4;
+}
+.compact-booking input:focus,
+.compact-booking select:focus {
+  outline: 2px solid #f9cc5d;
+  outline-offset: 2px;
+}
+.quick-service,
+.quick-date,
+.quick-time,
+.quick-riders {
+  grid-column: span 3;
+}
+.quick-name,
+.quick-phone,
+.quick-submit {
+  grid-column: span 4;
+}
+.compact-booking .quick-submit {
+  align-self: end;
+  min-height: 40px;
+  padding: 8px;
+  border-radius: 9px;
+  font-size: 13px;
+  gap: 8px;
+}
+.compact-note {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 10px;
+  line-height: 1.45;
+  font-weight: 400;
+  color: #eeebe3;
+}
+.compact-note svg {
+  color: #78dc96;
+}
+.compact-error {
+  color: #ffb9a8;
+  font-weight: 400;
+  font-size: 11px;
+}
+.compact-success {
+  align-self: center;
+}
+.compact-success h3 {
+  font-size: 25px;
+  margin-bottom: 8px;
+}
+.compact-success p {
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+.compact-success .text-button {
+  color: #f8d878;
+}
+.reference-section-title {
+  text-align: center;
+  margin-bottom: 24px;
+}
+.reference-section-title h2 {
+  font-size: clamp(25px, 2.3vw, 34px);
+  line-height: 1.18;
+  letter-spacing: -1px;
+  margin: 6px 0 9px;
+}
+.reference-section-title > p:last-child {
+  font-size: 12px;
+  line-height: 1.5;
+}
+.reference-services {
+  padding-block: 30px 28px;
+}
+.reference-service-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 13px;
+}
+.reference-service-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fffaf4;
+  border: 1px solid #e6dace;
+  box-shadow: 0 4px 6px #4a2c1617;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+.reference-service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px #4a2c1626;
+}
+.reference-service-card > img {
+  height: 135px;
+  width: 100%;
+}
+.reference-service-body {
+  padding: 12px 13px 13px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.reference-service-title {
+  display: flex;
+  gap: 9px;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+.reference-service-title svg {
+  color: #a16b0c;
+  width: 27px;
+}
+.reference-service-title h3 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.22;
+}
+.reference-service-body p {
+  font-size: 12px;
+  line-height: 1.45;
+  margin-bottom: 14px;
+}
+.reference-round-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 29px;
+  height: 29px;
+  border: 1px solid #ac790f;
+  border-radius: 50%;
+  color: #a36b09;
+  margin: auto auto 0;
+}
+.reference-benefits {
+  color: #fff;
+  background: linear-gradient(100deg, #111311, #282722, #10120f);
+  padding: 21px 0;
+  border-block: 1px solid #cdb174;
+}
+.reference-benefits > div {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+.reference-benefits > div > div {
+  padding-inline: 23px;
+  display: flex;
+  gap: 13px;
+  border-right: 1px solid #d2b87870;
+}
+.reference-benefits > div > div:first-child {
+  padding-left: 0;
+}
+.reference-benefits > div > div:last-child {
+  border: 0;
+  padding-right: 0;
+}
+.reference-benefits svg {
+  color: #f7d573;
+}
+.reference-benefits h3 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  line-height: 1.25;
+  margin-bottom: 7px;
+}
+.reference-benefits p {
+  font-size: 11px;
+  line-height: 1.4;
+  color: #e3ded3;
+}
+.reference-packages {
+  padding-block: 28px 25px;
+}
+.reference-package-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+.reference-package-card {
+  background: #fffaf5;
+  border: 1px solid #e9ddce;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 7px #4a2c1618;
+}
+.reference-package-card > img {
+  width: 100%;
+  height: 155px;
+}
+.reference-package-copy {
+  padding: 13px 17px;
+}
+.reference-package-copy h3 {
+  font-size: 22px;
+  letter-spacing: -0.5px;
+  margin-bottom: 6px;
+}
+.reference-package-copy > p {
+  font-size: 12px;
+  line-height: 1.5;
+  min-height: 36px;
+}
+.reference-package-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 9px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+.reference-package-meta strong {
+  color: #946008;
+  font-size: 14px;
+}
+.reference-package-meta > span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10px;
+}
+.reference-package-meta .button {
+  min-height: 33px;
+  padding: 7px 11px;
+  font-size: 11px;
+  gap: 5px;
+  border-radius: 9px;
+}
+.reference-package-meta .button > svg {
+  display: none;
+}
+.reference-how,
+.reference-stories,
+.reference-gallery {
+  display: grid;
+  grid-template-columns: 245px minmax(0, 1fr);
+  gap: 35px;
+  padding-block: 22px;
+}
+.reference-side-heading h2 {
+  font-size: 29px;
+  letter-spacing: -0.7px;
+  line-height: 1.08;
+  margin: 6px 0 10px;
+}
+.reference-side-heading > p:not(.reference-eyebrow) {
+  font-size: 12px;
+  line-height: 1.5;
+  max-width: 230px;
+}
+.reference-side-heading .reference-eyebrow {
+  font-size: 10px;
+  letter-spacing: 2.3px;
+}
+.reference-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 35px;
+  background: #fffcf780;
+  border: 1px solid #e9ddd3;
+  border-radius: 14px;
+  padding: 20px 28px;
+  box-shadow: 0 3px 5px #4a2c160c;
+}
+.reference-step-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(#fae8b7, #f3c654);
+  color: #292317;
+  box-shadow: 0 4px 8px #aa812526;
+  margin-bottom: 11px;
+}
+.reference-steps > div {
+  position: relative;
+}
+.reference-steps > div:not(:last-child):after {
+  content: "→";
+  position: absolute;
+  right: -24px;
+  top: 44%;
+  font-size: 24px;
+  color: #a77727;
+}
+.reference-steps h3 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  line-height: 1.3;
+  margin-bottom: 6px;
+}
+.reference-steps p {
+  font-size: 12px;
+  line-height: 1.4;
+}
+.reference-story-invite {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 23px 28px;
+  border: 1px solid #e6d9ca;
+  border-radius: 13px;
+  background: #fffcf9a0;
+}
+.reference-story-invite > svg {
+  color: #b8841d;
+}
+.reference-story-invite h3 {
+  font-size: 23px;
+  margin-bottom: 6px;
+}
+.reference-story-invite p {
+  font-size: 12px;
+  line-height: 1.55;
+}
+.reference-story-invite .button {
+  margin-left: auto;
+  font-size: 11px;
+  padding: 8px 13px;
+  flex-shrink: 0;
+}
+.reference-review-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.reference-review-grid blockquote {
+  margin: 0;
+  padding: 22px;
+  border: 1px solid #e3d5c4;
+  border-radius: 12px;
+  background: #fff9;
+  font-size: 12px;
+}
+.reference-review-grid cite {
+  display: block;
+  margin-top: 12px;
+  font-weight: 600;
+  font-style: normal;
+}
+.reference-gallery {
+  padding-block: 24px 28px;
+}
+.reference-gallery .button {
+  margin-top: 12px;
+  padding: 7px 14px;
+  min-height: 33px;
+  border-radius: 20px;
+  font-size: 11px;
+}
+.reference-gallery-strip {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+}
+.reference-gallery-strip a {
+  overflow: hidden;
+  border-radius: 10px;
+}
+.reference-gallery-strip img {
+  width: 100%;
+  height: 175px;
+  transition: transform 0.3s;
+}
+.reference-gallery-strip a:hover img {
+  transform: scale(1.06);
+}
+.reference-faq-wrap {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(110deg, #fbf6ef, #f7e4c8);
+}
+.reference-faq {
+  display: grid;
+  grid-template-columns: 245px minmax(0, 1.4fr) minmax(0, 0.7fr);
+  gap: 35px;
+  padding-block: 25px;
+  position: relative;
+}
+.reference-faq-list {
+  position: relative;
+  z-index: 1;
+}
+.reference-faq-item {
+  border: 1px solid #ded3c6;
+  box-shadow: 0 2px 3px #6c4a1210;
+  background: #fffaf5;
+  border-radius: 7px;
+  margin-bottom: 5px;
+  overflow: hidden;
+}
+.reference-faq-item button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  padding: 10px 14px;
+  min-height: 39px;
+  width: 100%;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  line-height: 1.3;
+  background: transparent;
+  color: #191712;
+  gap: 12px;
+}
+.reference-faq-item button[aria-expanded="true"] svg {
+  transform: rotate(180deg);
+}
+.reference-faq-item > p {
+  padding: 2px 14px 14px;
+  font-size: 12px;
+  line-height: 1.55;
+}
+.reference-faq-image {
+  margin: -25px -120px -25px -20px;
+  position: relative;
+  mask-image: linear-gradient(90deg, transparent, #000 42%);
+}
+.reference-faq-image img {
+  width: 100%;
+  height: 100%;
+  object-position: 55%;
+  opacity: 0.8;
+}
+@media (min-width: 1500px) {
+  .reference-hero-copy {
+    min-height: 420px;
+  }
+  .reference-hero-inner {
+    padding-top: 45px;
+  }
+}
+@media (max-width: 1200px) {
+  .header-main {
+    gap: 16px;
+  }
+  .header-main nav {
+    gap: 14px;
+  }
+  .header-main nav a {
+    font-size: 11px;
+  }
+  .header-contact-actions {
+    display: none;
+  }
+  .header-main .brand-logo {
+    width: 157px;
+  }
+  .compact-booking {
+    width: 100%;
+    grid-template-columns: 190px 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+  .compact-booking-heading h2 {
+    font-size: 22px;
+  }
+  .reference-service-body {
+    padding-inline: 10px;
+  }
+  .reference-service-title {
+    gap: 6px;
+  }
+  .reference-service-title svg {
+    width: 22px;
+  }
+  .reference-benefits > div > div {
+    padding-inline: 14px;
+    gap: 9px;
+  }
+  .reference-benefits svg {
+    width: 24px;
+  }
+  .reference-how,
+  .reference-stories,
+  .reference-gallery {
+    grid-template-columns: 210px minmax(0, 1fr);
+    gap: 24px;
+  }
+  .reference-faq {
+    grid-template-columns: 210px minmax(0, 1.4fr) minmax(0, 0.6fr);
+    gap: 24px;
+  }
+  .reference-story-invite {
+    flex-wrap: wrap;
+    gap: 13px;
+    padding: 20px;
+  }
+  .reference-story-invite .button {
+    margin-left: 47px;
+  }
+  .reference-package-copy h3 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 1000px) {
+  .header-main nav {
+    display: none;
+  }
+  .header-main .header-book {
+    margin-left: auto;
+  }
+  .header-main .menu-toggle {
+    display: inline-flex;
+  }
+  .reference-hero-copy {
+    margin-left: 49%;
+    min-height: 350px;
+  }
+  .reference-hero h1 {
+    font-size: 52px;
+    letter-spacing: -2px;
+  }
+  .reference-hero-copy .reference-eyebrow {
+    font-size: 10px;
+    letter-spacing: 1.7px;
+  }
+  .reference-hero-copy > p:not(.reference-eyebrow) {
+    font-size: 13px;
+  }
+  .compact-booking {
+    grid-template-columns: 155px 1fr;
+    gap: 18px;
+  }
+  .compact-booking-heading {
+    grid-template-columns: 1fr;
+    gap: 9px;
+  }
+  .compact-booking-heading > svg {
+    width: 24px;
+  }
+  .compact-booking form {
+    gap: 10px;
+  }
+  .quick-service,
+  .quick-date,
+  .quick-time,
+  .quick-riders {
+    grid-column: span 6;
+  }
+  .quick-name,
+  .quick-phone {
+    grid-column: span 6;
+  }
+  .compact-booking .quick-submit {
+    grid-column: 1/-1;
+  }
+  .reference-service-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+  }
+  .reference-service-card > img {
+    height: 160px;
+  }
+  .reference-service-title h3 {
+    font-size: 15px;
+  }
+  .reference-service-body {
+    padding: 14px;
+  }
+  .reference-benefits > div {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px 15px;
+  }
+  .reference-benefits > div > div {
+    padding: 0;
+    border: 0;
+  }
+  .reference-package-grid {
+    gap: 14px;
+  }
+  .reference-package-copy {
+    padding: 13px;
+  }
+  .reference-package-card > img {
+    height: 135px;
+  }
+  .reference-package-meta > span {
+    display: none;
+  }
+  .reference-how,
+  .reference-stories,
+  .reference-gallery {
+    grid-template-columns: 180px minmax(0, 1fr);
+    gap: 20px;
+  }
+  .reference-side-heading h2 {
+    font-size: 26px;
+  }
+  .reference-steps {
+    padding: 18px;
+    gap: 22px;
+  }
+  .reference-steps > div:not(:last-child):after {
+    right: -20px;
+    font-size: 20px;
+  }
+  .reference-gallery-strip {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+  .reference-gallery-strip img {
+    height: 165px;
+  }
+  .reference-faq {
+    grid-template-columns: 180px minmax(0, 1fr);
+    gap: 20px;
+  }
+  .reference-faq-image {
+    display: none;
+  }
+}
+@media (max-width: 700px) {
+  .header-main {
+    width: calc(100% - 28px);
+    height: 86px;
+    gap: 9px;
+  }
+  .header-main .brand-logo {
+    width: 140px;
+    height: 76px;
+  }
+  .header-main .header-book {
+    min-height: 37px;
+    font-size: 11px;
+    padding: 8px 10px;
+  }
+  .reference-home .shell {
+    width: calc(100% - 32px);
+  }
+  .reference-hero {
+    padding-bottom: 28px;
+  }
+  .reference-hero-inner {
+    padding-top: 325px;
+  }
+  .reference-hero-image {
+    height: 405px;
+    object-fit: cover;
+    object-position: 25% center;
+  }
+  .reference-hero-wash {
+    height: 408px;
+    background: linear-gradient(180deg, transparent 55%, #f7e3c5);
+  }
+  .reference-hero {
+    background: #f7e3c5;
+  }
+  .reference-hero-copy {
+    margin-left: 0;
+    min-height: 0;
+    text-align: center;
+    padding: 0 8px 24px;
+  }
+  .reference-hero-copy .reference-eyebrow {
+    color: #7b4e0d;
+    text-shadow: none;
+    justify-content: center;
+  }
+  .reference-hero h1 {
+    font-size: clamp(44px, 11vw, 61px);
+    line-height: 1.02;
+    margin-block: 10px 15px;
+    letter-spacing: -1.8px;
+  }
+  .reference-hero h1 br {
+    display: none;
+  }
+  .reference-hero-copy h2 {
+    font-size: 17px;
+    max-width: 350px;
+    margin-inline: auto;
+  }
+  .reference-hero-copy > p:not(.reference-eyebrow) {
+    font-size: 13px;
+    max-width: 400px;
+    margin-inline: auto;
+  }
+  .reference-hero-copy > .button {
+    min-height: 44px;
+    font-size: 13px;
+  }
+  .compact-booking {
+    display: block;
+    border-radius: 18px;
+    padding: 20px 17px;
+  }
+  .compact-booking-heading {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    align-items: center;
+    border: 0;
+    border-bottom: 1px solid #d6b36770;
+    padding: 0 0 15px;
+    margin-bottom: 16px;
+    gap: 10px;
+  }
+  .compact-booking-heading h2 {
+    font-size: 23px;
+  }
+  .compact-booking-heading h2 br {
+    display: none;
+  }
+  .compact-booking-heading p {
+    grid-column: 2;
+    font-size: 12px;
+    margin: 0;
+  }
+  .compact-booking-heading p br {
+    display: none;
+  }
+  .compact-booking input,
+  .compact-booking select {
+    font-size: 16px;
+    height: 43px;
+    padding-inline: 8px;
+  }
+  .compact-booking label {
+    font-size: 12px;
+  }
+  .compact-booking form {
+    gap: 13px 10px;
+  }
+  .quick-service {
+    grid-column: 1/-1;
+  }
+  .quick-riders {
+    grid-column: 1/-1;
+  }
+  .quick-name,
+  .quick-phone {
+    grid-column: 1/-1;
+  }
+  .compact-booking .quick-submit {
+    min-height: 46px;
+    font-size: 14px;
+  }
+  .compact-note {
+    align-items: flex-start;
+    text-align: center;
+    font-size: 10px;
+  }
+  .reference-services {
+    padding-block: 27px;
+  }
+  .reference-section-title {
+    margin-bottom: 20px;
+  }
+  .reference-section-title h2 {
+    font-size: 27px;
+    letter-spacing: -0.6px;
+    margin-block: 8px 11px;
+  }
+  .reference-section-title > p:last-child {
+    font-size: 12px;
+  }
+  .reference-service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .reference-service-card > img {
+    height: 130px;
+  }
+  .reference-service-title h3 {
+    font-size: 13px;
+  }
+  .reference-service-title svg {
+    width: 25px;
+  }
+  .reference-service-body {
+    padding: 12px;
+  }
+  .reference-service-body p {
+    font-size: 12px;
+  }
+  .reference-benefits > div {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 18px;
+  }
+  .reference-benefits > div > div:last-child {
+    grid-column: 1/-1;
+    justify-content: center;
+    padding-top: 13px;
+    border-top: 1px solid #e6cd8433;
+  }
+  .reference-benefits p {
+    font-size: 11px;
+  }
+  .reference-package-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .reference-package-card > img {
+    height: 190px;
+  }
+  .reference-package-copy {
+    padding: 16px;
+  }
+  .reference-package-copy h3 {
+    font-size: 23px;
+  }
+  .reference-package-meta > span {
+    display: flex;
+  }
+  .reference-package-meta .button {
+    min-height: 40px;
+    padding-inline: 15px;
+  }
+  .reference-how,
+  .reference-stories,
+  .reference-gallery {
+    grid-template-columns: 1fr;
+    gap: 19px;
+    padding-block: 24px;
+  }
+  .reference-side-heading h2 {
+    font-size: 29px;
+  }
+  .reference-side-heading h2 br {
+    display: none;
+  }
+  .reference-side-heading > p:not(.reference-eyebrow) {
+    max-width: 380px;
+  }
+  .reference-steps {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding: 23px;
+  }
+  .reference-steps > div {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    column-gap: 15px;
+  }
+  .reference-step-icon {
+    grid-row: span 2;
+    margin-bottom: 0;
+  }
+  .reference-steps h3 {
+    font-size: 14px;
+    align-self: end;
+  }
+  .reference-steps p {
+    grid-column: 2;
+    font-size: 13px;
+  }
+  .reference-steps > div:not(:last-child):after {
+    display: none;
+  }
+  .reference-story-invite {
+    display: block;
+    padding: 22px;
+  }
+  .reference-story-invite h3 {
+    margin-top: 10px;
+  }
+  .reference-story-invite .button {
+    margin: 15px 0 0;
+  }
+  .reference-review-grid {
+    grid-template-columns: 1fr;
+  }
+  .reference-gallery-strip {
+    grid-template-columns: repeat(5, 135px);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 7px;
+  }
+  .reference-gallery-strip a {
+    scroll-snap-align: start;
+  }
+  .reference-gallery-strip img {
+    height: 155px;
+  }
+  .reference-faq {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding-block: 28px;
+  }
+  .reference-faq-item button {
+    min-height: 44px;
+    font-size: 13px;
+  }
+  .reference-faq-item > p {
+    font-size: 13px;
+  }
+  .footer-main {
+    gap: 25px;
+  }
+  .footer-main > div:not(:first-child) {
+    border-left: 0;
+    padding-left: 0;
+  }
+  .footer-main .brand-logo {
+    width: 180px;
+    height: 90px;
+  }
+  .footer-bottom {
+    font-size: 10px;
+  }
+}

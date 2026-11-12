@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { ArrowUpRight, ArrowRight, MessageCircle } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
 import { whatsappUrl } from "../lib/booking";
-import { site, type ServiceType } from "../data/site";
+import { type ServiceType } from "../data/site";
 export function Logo({ onNavigate }: { onNavigate?: () => void } = {}) {
   return (
     <Link
@@ -13,22 +13,13 @@ export function Logo({ onNavigate }: { onNavigate?: () => void } = {}) {
       aria-label="Sky Stable home"
       onClick={onNavigate}
     >
-      <svg viewBox="0 0 64 64" aria-hidden="true">
-        <path
-          fill="currentColor"
-          d="M14 54c19-8 24-22 17-31L20 34l-9-6L28 12l3-9 7 10c17 7 23 27 12 43H14Zm21-34 3 3 3-3-3-2Z"
-        />
-        <path
-          d="M32 14c-11 7-16 19-16 28"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-        />
-      </svg>
-      <span>
-        {site.name}
-        <small>HORSE RIDING</small>
-      </span>
+      <img
+        className="brand-logo"
+        src="/images/sky-stable-logo.png"
+        alt="Sky Stable — Horse Riding"
+        width="420"
+        height="210"
+      />
     </Link>
   );
 }

@@ -85,6 +85,27 @@ export const bookingSchema = z
     },
   );
 export type BookingValues = z.infer<typeof bookingSchema>;
+/** The homepage asks for total riders; ages and experience are discussed later. */
+export const quickBookingSchema = z
+  .object({
+    service: bookingSchema.shape.service,
+    date: bookingSchema.shape.date,
+    time: bookingSchema.shape.time,
+    riders: bookingSchema.shape.riders,
+    name: bookingSchema.shape.name,
+    phone: bookingSchema.shape.phone,
+  })
+  .refine(
+    (v) =>
+      !validDate(v.date) ||
+      !site.rideTimeSlots.includes(v.time) ||
+      new Date(`${v.date}T${v.time}:00+04:00`).getTime() > Date.now(),
+    { path: ["time"], message: "Choose a future time in UAE time (UTC+4)." },
+  );
+export type QuickBookingValues = z.infer<typeof quickBookingSchema>;
+export function quickBookingMessage(v: QuickBookingValues) {
+  return `🐎 ${site.name.toUpperCase()} - RIDE ENQUIRY\n\nService: ${v.service}\nPreferred date: ${v.date}\nPreferred time: ${v.time} (Asia/Dubai, UTC+4)\nTotal riders: ${v.riders}\nName: ${v.name}\nPhone: ${v.phone}\n\nPlease confirm availability, price and meeting point. Rider ages, experience and duration to be discussed. Thank you!`;
+}
 export function bookingMessage(v: BookingValues) {
   return `🐎 ${site.name.toUpperCase()} - NEW BOOKING REQUEST\n\nService: ${v.service}\nDate: ${v.date}\nPreferred Time: ${v.time} (Asia/Dubai, UTC+4)\nRiders: ${v.riders}\nAdults / Children: ${v.adults} adults, ${v.children} children\nDuration: ${v.duration}\nExperience: ${v.experience}\nName: ${v.name}\nPhone: ${v.phone}${v.email ? `\nEmail: ${v.email}` : ""}\nSpecial Requests: ${v.notes || "None"}\n\nPlease confirm availability and pricing.\n\nThank you!`;
 }

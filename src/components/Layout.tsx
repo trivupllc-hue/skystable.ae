@@ -15,12 +15,11 @@ import { whatsappUrl } from "../lib/booking";
 import { getMeta } from "../lib/seo";
 const navigation = [
   ["Home", "/"],
-  ["Our Experiences", "/experiences"],
-  ["Riding Lessons", "/horse-riding-classes-sharjah"],
-  ["Stable Services", "/stable-services"],
-  ["Horse Trading", "/horse-trading"],
+  ["Services", "/experiences"],
+  ["Packages", "/experiences#packages"],
   ["Gallery", "/gallery"],
-  ["About", "/about"],
+  ["About Us", "/about"],
+  ["FAQ", "/contact#faq"],
   ["Contact", "/contact"],
 ];
 export default function Layout() {
@@ -98,27 +97,42 @@ export default function Layout() {
         Skip to content
       </a>
       <header className="site-header">
-        <div className="header-top">
-          <span>
-            <MapPin size={12} />
-            {site.location}
-          </span>
-          <span>Good moments begin in the saddle.</span>
-          <a href={`tel:${site.callNumber}`}>
-            <Phone size={12} />
-            {site.displayPhone}
-          </a>
-        </div>
         <div className="header-main shell">
           <Logo />
           <nav aria-label="Main navigation">
-            {navigation.map(([title, path]) => (
-              <NavLink key={path} to={path} end={path === "/"}>
-                {title}
-              </NavLink>
-            ))}
+            {navigation.map(([title, path]) =>
+              path.includes("#") ? (
+                <Link key={path} to={path}>
+                  {title}
+                </Link>
+              ) : (
+                <NavLink key={path} to={path} end>
+                  {title}
+                </NavLink>
+              ),
+            )}
           </nav>
-          <BookButton className="header-book">Book Now</BookButton>
+          <div className="header-contact-actions">
+            <a
+              className="header-contact"
+              href={whatsappUrl(
+                "Hello Sky Stable! I would like to enquire about a ride.",
+              )}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <MessageCircle size={17} />
+              WhatsApp
+            </a>
+            <a className="header-contact" href={`tel:${site.callNumber}`}>
+              <Phone size={15} />
+              Call
+            </a>
+          </div>
+          <BookButton className="header-book">
+            <CalendarDays size={15} />
+            Book Now
+          </BookButton>
           <button
             className="menu-toggle icon-button"
             onClick={() => setMenu(true)}
@@ -227,8 +241,8 @@ export default function Layout() {
           <p>Made for the moments outside.</p>
         </div>
         <div className="shell demo-note">
-          Illustrative stock photography. Images do not depict Sky Stable’s
-          horses, team or facilities.
+          Illustrative stock and AI-generated imagery. Images do not depict Sky
+          Stable’s horses, team or facilities.
         </div>
       </footer>
       <a

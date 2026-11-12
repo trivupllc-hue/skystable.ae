@@ -6,168 +6,21 @@ import {
   Heart,
   MapPin,
   ShieldCheck,
-  Sun,
   Users,
 } from "lucide-react";
 import { site, services } from "./data/site";
-import {
-  BookButton,
-  Photo,
-  Reveal,
-  SectionTitle,
-  WhatsApp,
-} from "./components/ui";
+import { BookButton, Photo, SectionTitle, WhatsApp } from "./components/ui";
 import {
   Experiences,
   FAQ,
   FinalCTA,
   HowBookingWorks,
   Packages,
-  QuickBooking,
   ReviewSection,
 } from "./components/Sections";
-import { GalleryPreview } from "./components/Gallery";
+import Landing from "./components/Landing";
 export function Home() {
-  return (
-    <>
-      <section className="hero">
-        <Photo
-          name="hero"
-          alt="Lone horse rider on Dubai desert dunes — illustrative stock photography"
-          priority
-        />
-        <div className="hero-shade" />
-        <div className="shell hero-content">
-          <p className="eyebrow">
-            <span />
-            {site.tagline.toUpperCase()}
-          </p>
-          <h1>
-            Horse Riding
-            <br />
-            in <em>Sharjah.</em>
-          </h1>
-          <h2>Where Every Ride Becomes an Experience</h2>
-          <p className="hero-description">
-            Discover unforgettable desert adventures, beautiful beach rides,
-            professional horse riding lessons, and quality equestrian services
-            with Sky Stable in Sharjah, UAE.
-          </p>
-          <div className="button-row">
-            <BookButton />
-            <Link className="button button-glass" to="/experiences">
-              Explore Experiences
-              <ArrowUpRight size={17} />
-            </Link>
-          </div>
-          <WhatsApp className="hero-whatsapp" />
-          <div className="hero-bottom">
-            <span>
-              <MapPin size={14} />
-              SHARJAH, UNITED ARAB EMIRATES
-            </span>
-            <span>
-              THE OUTSIDE IS CALLING <span className="hero-line" />
-            </span>
-          </div>
-        </div>
-        <span className="hero-photo-label">
-          Illustrative desert photography
-        </span>
-      </section>
-      <QuickBooking />
-      <div className="trust-strip shell">
-        <span>
-          <Sun />
-          Desert & coastal experiences
-        </span>
-        <span>
-          <Users />
-          First-timers welcome to enquire
-        </span>
-        <span>
-          <Heart />
-          For the love of horses
-        </span>
-        <span>
-          <MapPin />
-          Sharjah, UAE
-        </span>
-      </div>
-      <Experiences />
-      <section className="story-section section shell">
-        <Reveal className="story-images">
-          <Photo
-            name="horse"
-            alt="Horse portrait — illustrative stock photography"
-          />
-          <div className="story-image-small">
-            <Photo
-              name="private"
-              alt="Rider and horse — illustrative stock photography"
-            />
-          </div>
-          <span className="story-stamp">
-            A LITTLE FREEDOM
-            <br />
-            <svg viewBox="0 0 40 40" aria-hidden="true">
-              <path
-                d="M10 34c10-5 13-13 9-19l-7 5-5-3L18 7l2-5 4 6c10 4 15 17 8 27Z"
-                fill="currentColor"
-              />
-            </svg>
-            A LASTING CONNECTION
-          </span>
-        </Reveal>
-        <div className="story-copy">
-          <SectionTitle
-            eyebrow="WELCOME TO SKY STABLE"
-            title={
-              <>
-                More than a ride.
-                <br />
-                <em>A feeling.</em>
-              </>
-            }
-          />
-          <p>
-            There’s something about a horse that brings you back to the present.
-            The quiet connection. The open air. The simple joy of moving
-            together.
-          </p>
-          <p>
-            Based in Sharjah, Sky Stable brings together riding experiences,
-            learning and equestrian enquiries for people who want a little more
-            of that feeling in their lives.
-          </p>
-          <div className="story-points">
-            <span>
-              <Check />
-              Find a starting point that suits you
-            </span>
-            <span>
-              <Check />
-              Talk to us about your riding goals
-            </span>
-            <span>
-              <Check />
-              Make space for something memorable
-            </span>
-          </div>
-          <Link to="/about" className="button button-dark">
-            Get to Know Us
-            <ArrowUpRight size={17} />
-          </Link>
-        </div>
-      </section>
-      <Packages />
-      <HowBookingWorks />
-      <GalleryPreview />
-      <ReviewSection />
-      <FAQ />
-      <FinalCTA />
-    </>
-  );
+  return <Landing />;
 }
 export function PageIntro({
   eyebrow,

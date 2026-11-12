@@ -2,6 +2,7 @@ import { afterEach, describe, expect, it, vi } from "vitest";
 import {
   bookingMessage,
   bookingSchema,
+  quickBookingSchema,
   dubaiToday,
   sellerMessage,
   sellerSchema,
@@ -25,6 +26,17 @@ const valid: BookingValues = {
 };
 afterEach(() => vi.useRealTimers());
 describe("Dubai time and booking validation", () => {
+  it("rejects expired and impossible homepage booking slots", () => {
+    vi.useFakeTimers();
+    vi.setSystemTime(new Date("2026-11-13T03:01:00Z"));
+    expect(quickBookingSchema.safeParse(valid).success).toBe(false);
+    expect(
+      quickBookingSchema.safeParse({ ...valid, time: "08:00" }).success,
+    ).toBe(true);
+    expect(
+      quickBookingSchema.safeParse({ ...valid, date: "2027-02-30" }).success,
+    ).toBe(false);
+  });
   it("uses Dubai calendar day at the UTC date boundary", () => {
     expect(dubaiToday(new Date("2026-11-12T20:30:00Z"))).toBe("2026-11-13");
     expect(dubaiToday(new Date("2026-11-12T19:59:00Z"))).toBe("2026-11-12");

@@ -37,7 +37,7 @@ Tests cover Dubai date rollover, past dates/times, impossible dates, rider total
 
 1. The canonical domain is configured as **https://skystable.ae**. Production builds generate absolute canonical and social preview URLs, indexable pages and a populated sitemap for this domain. The Cloudflare deployment configuration connects this domain to the website. `VITE_SITE_URL`, if set, overrides `site.seo.baseUrl`; keep it consistent with this domain.
 2. Confirm service descriptions and preferred request slots with the owner. Package cards are clearly described as **enquiry ideas**, not confirmed products. Prices are “Request Price” until supplied.
-3. Replace illustrative photography with approved Sky Stable media when available, and update its captions/credits and stock-image disclosures accordingly. Current images are licensed Pexels stock and are explicitly labeled. They are not claimed as Sky Stable facilities, team members or horses.
+3. Replace illustrative photography with approved Sky Stable media when available, and update its captions/credits and stock-image disclosures accordingly. The homepage hero is an explicitly labeled AI-generated scene; other photographs are licensed Pexels stock. The logo was recreated from the owner-selected design. See `DESIGN.md` for asset details and prompts. They are not claimed as Sky Stable facilities, team members or horses.
 4. Add only verified opening hours, social profiles, trainer biographies, reviews and genuine sale listings. Empty values are intentionally omitted or shown as honest empty states.
 5. Preview desktop and mobile, then complete a real test request with the business owner: prepare the message, inspect the recipient, tap Send yourself in WhatsApp, and confirm receipt with Sky Stable.
 
@@ -74,7 +74,7 @@ In `src/data/site.ts`, find a package and replace `price: null` with an approved
 ### Update photographs and gallery
 
 1. Put approved optimized WebP photographs in `public/images/`.
-2. The reusable image component expects two files per image ID: `name-640.webp` and `name-1200.webp`. The homepage hero also needs `hero-1920.webp`. Maintain consistent crops/aspect ratios across variants. Record the 1200px variant’s width and height in its `credits.json` entry so the gallery reserves the correct space before loading. The current hero is approximately 1.745:1; other images can be portrait or landscape.
+2. The reusable image component expects two files per image ID: `name-640.webp` and `name-1200.webp`. The new homepage hero uses `sunset-hero-960.webp` and `sunset-hero-1920.webp`, and the logo uses `sky-stable-logo.png`. Maintain consistent crops/aspect ratios across variants. Record the 1200px variant’s width and height in its `credits.json` entry so the gallery reserves the correct space before loading. The new homepage hero is 2:1; other images can be portrait or landscape.
 3. Edit the gallery titles, category and descriptive alt text in `src/data/content.ts` → `gallery`.
 4. Service cards use image IDs in `src/data/site.ts` → `services`.
 5. Update attribution in `public/images/credits.json` and the Photography Credits page. When replacing stock with real media, update the related stock disclosures in the image descriptions, gallery, homepage, privacy/credits copy and footer. Do not remove disclosures for images that remain stock.

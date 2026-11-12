@@ -46,13 +46,14 @@ export function PhotographyPage() {
       <p className="eyebrow">VISUAL INSPIRATION</p>
       <h1>Photography credits.</h1>
       <p>
-        All current photographs are illustrative stock images. They do not
-        depict Sky Stable’s actual facilities, horses, staff or customers. Some
-        images were taken outside the UAE. The hero photograph depicts desert
-        riding in Dubai.
+        Website imagery is illustrative and does not depict Sky Stable’s actual
+        facilities, horses, staff or customers. The homepage sunset scene and
+        logo were recreated with AI from the owner’s preferred design reference.
+        Other photographs are licensed stock images; some were taken outside the
+        UAE.
       </p>
       <p>
-        Photography is used under the{" "}
+        The stock photography below is used under the{" "}
         <a
           href="https://www.pexels.com/license/"
           target="_blank"

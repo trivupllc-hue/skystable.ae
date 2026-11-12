@@ -1,0 +1,123 @@
+[
+  {
+    "name": "hero",
+    "files": [
+      "hero-640.webp",
+      "hero-1200.webp",
+      "hero-1920.webp"
+    ],
+    "source": "https://www.pexels.com/photo/person-riding-horse-on-desert-18908214/",
+    "photographer": "Deepesh Raj",
+    "alt": "A rider on horseback crossing a sand dune in Dubai; illustrative stock photograph.",
+    "license": "https://www.pexels.com/license/",
+    "kind": "illustrative stock photography",
+    "crop": "bottom landscape crop",
+    "width": 1200,
+    "height": 688
+  },
+  {
+    "name": "desert",
+    "files": [
+      "desert-640.webp",
+      "desert-1200.webp"
+    ],
+    "source": "https://www.pexels.com/photo/people-riding-horses-on-desert-13211750/",
+    "photographer": "Sami Aksu",
+    "alt": "Horse riders exploring a sandy landscape in Cappadocia; illustrative stock photograph.",
+    "license": "https://www.pexels.com/license/",
+    "kind": "illustrative stock photography",
+    "crop": "original aspect ratio",
+    "width": 1200,
+    "height": 800
+  },
+  {
+    "name": "lessons",
+    "files": [
+      "lessons-640.webp",
+      "lessons-1200.webp"
+    ],
+    "source": "https://www.pexels.com/photo/women-riding-a-horse-with-an-instructor-7883442/",
+    "photographer": "Barbara Olsen",
+    "alt": "A rider and instructor during an outdoor horse riding lesson; illustrative stock photograph.",
+    "license": "https://www.pexels.com/license/",
+    "kind": "illustrative stock photography",
+    "crop": "original aspect ratio",
+    "width": 1200,
+    "height": 1800
+  },
+  {
+    "name": "private",
+    "files": [
+      "private-640.webp",
+      "private-1200.webp"
+    ],
+    "source": "https://www.pexels.com/photo/portrait-of-a-woman-horseback-riding-7882951/",
+    "photographer": "Barbara Olsen",
+    "alt": "A helmeted rider on a chestnut horse near a barn; illustrative stock photograph.",
+    "license": "https://www.pexels.com/license/",
+    "kind": "illustrative stock photography",
+    "crop": "original aspect ratio",
+    "width": 1200,
+    "height": 800
+  },
+  {
+    "name": "beach",
+    "files": [
+      "beach-640.webp",
+      "beach-1200.webp"
+    ],
+    "source": "https://www.pexels.com/photo/photo-of-two-people-riding-a-horse-on-a-beach-14706987/",
+    "photographer": "Sébastien Vincon",
+    "alt": "Two riders following a beach beside the waves; illustrative stock photograph.",
+    "license": "https://www.pexels.com/license/",
+    "kind": "illustrative stock photography",
+    "crop": "original aspect ratio",
+    "width": 1200,
+    "height": 675
+  },
+  {
+    "name": "horse",
+    "files": [
+      "horse-640.webp",
+      "horse-1200.webp"
+    ],
+    "source": "https://www.pexels.com/photo/portrait-of-a-horse-with-a-long-mane-17896393/",
+    "photographer": "Daniil Kondrashin",
+    "alt": "Portrait of a brown horse with a pale mane; illustrative stock photograph, not a sale listing.",
+    "license": "https://www.pexels.com/license/",
+    "kind": "illustrative stock photography",
+    "crop": "original aspect ratio",
+    "width": 1200,
+    "height": 1634
+  },
+  {
+    "name": "stable",
+    "files": [
+      "stable-640.webp",
+      "stable-1200.webp"
+    ],
+    "source": "https://www.pexels.com/photo/horses-at-the-entrance-of-stable-7882841/",
+    "photographer": "Barbara Olsen",
+    "alt": "A handler leading two horses into a stable; illustrative stock photograph, not Sky Stable facilities.",
+    "license": "https://www.pexels.com/license/",
+    "kind": "illustrative stock photography",
+    "crop": "original aspect ratio",
+    "width": 1200,
+    "height": 1800
+  },
+  {
+    "name": "children",
+    "files": [
+      "children-640.webp",
+      "children-1200.webp"
+    ],
+    "source": "https://www.pexels.com/photo/woman-teaching-a-girl-how-to-ride-a-horse-7883100/",
+    "photographer": "Barbara Olsen",
+    "alt": "An adult guiding a young helmeted horse rider; illustrative stock photograph.",
+    "license": "https://www.pexels.com/license/",
+    "kind": "illustrative stock photography",
+    "crop": "original aspect ratio",
+    "width": 1200,
+    "height": 1800
+  }
+]

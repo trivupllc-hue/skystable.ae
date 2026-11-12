@@ -128,3 +128,47 @@ export type SellerValues = z.infer<typeof sellerSchema>;
 export function sellerMessage(v: SellerValues) {
   return `🐎 ${site.name.toUpperCase()} - HORSE SELLING ENQUIRY\n\nOwner: ${v.name}\nPhone: ${v.phone}\nHorse: ${v.horseName}\nBreed: ${v.breed}\nAge: ${v.age}\nGender: ${v.gender}\nTraining: ${v.training}\nLocation: ${v.location}\nAsking price: ${v.price || "To discuss"}\nAdditional details: ${v.notes || "None"}\n\nPlease let me know the next steps. I can share photographs and documents in WhatsApp.`;
 }
+
+export const transportSchema = z
+  .object({
+    name: bookingSchema.shape.name,
+    phone,
+    pickup: z.string().trim().min(2, "Enter the pickup location.").max(250),
+    destination: z.string().trim().min(2, "Enter the destination.").max(250),
+    date: bookingSchema.shape.date,
+    time: z
+      .string()
+      .regex(/^([01]\d|2[0-3]):[0-5]\d$/, "Choose a pickup time."),
+    horses: z
+      .number()
+      .int()
+      .min(1, "Enter at least one horse.")
+      .max(20, "Please call for more than 20 horses."),
+    journey: z.enum(["One-way move", "Short visit with return"]),
+    returnTime: z.string().trim().max(150),
+    notes: z
+      .string()
+      .trim()
+      .max(1500, "Please keep details under 1,500 characters."),
+  })
+  .refine(
+    (v) => v.journey !== "Short visit with return" || v.returnTime.length >= 2,
+    {
+      path: ["returnTime"],
+      message: "Tell us when you would like the return pickup.",
+    },
+  )
+  .refine(
+    (v) =>
+      !validDate(v.date) ||
+      !/^([01]\d|2[0-3]):[0-5]\d$/.test(v.time) ||
+      new Date(`${v.date}T${v.time}:00+04:00`).getTime() > Date.now(),
+    {
+      path: ["time"],
+      message: "Choose a future pickup time in UAE time (UTC+4).",
+    },
+  );
+export type TransportValues = z.infer<typeof transportSchema>;
+export function transportMessage(v: TransportValues) {
+  return `🐎 ${site.name.toUpperCase()} - HORSE TRANSPORT ENQUIRY\n\nName: ${v.name}\nPhone: ${v.phone}\nPickup: ${v.pickup}\nDestination: ${v.destination}\nPreferred date: ${v.date}\nPreferred pickup time: ${v.time} (Asia/Dubai, UTC+4)\nHorses: ${v.horses}\nJourney: ${v.journey}${v.journey === "Short visit with return" ? `\nRequested return pickup: ${v.returnTime}` : ""}\nHorse / journey details: ${v.notes || "To discuss"}\n\nPlease confirm availability, transport arrangements and a quote before booking. Thank you!`;
+}

@@ -203,3 +203,10 @@ vercel.json               Optional Vercel deployment settings
 ```
 
 No bookings are collected by a server, no email is sent, and no testimonials, credentials, ratings, prices or horse listings are invented. All fonts and images are hosted locally; there are no analytics or embedded map trackers in this initial version.
+
+
+### Classes, lessons and horse transport
+
+The first service card combines riding classes and private lessons at `/horse-riding-classes-sharjah`. The former `/private-riding-lessons-sharjah` address redirects permanently to that page using `public/_redirects`; React also handles the old route for in-app navigation.
+
+The second card is Horse Transport at `/horse-transport-sharjah`. It supports one-way moves and short visits with a return pickup. Its enquiry form collects pickup, destination, preferred date/time, horse count and contact details, with a conditional return-pickup field. It prepares a WhatsApp draft for the owner’s confirmed number. Transport selections in the riding forms lead to the dedicated transport enquiry. No fixed prices, vehicle specifications or service-area promises are added.

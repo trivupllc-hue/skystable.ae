@@ -1,6 +1,10 @@
 import { site } from "./site";
 export const faqs = [
   [
+    "Can you move my horse for a short visit or a one-off journey?",
+    "Yes. Use the Horse Transport page to request a one-way move or a short visit with a return journey. Share the pickup and destination, number of horses and preferred times. The team will confirm availability, transport arrangements and the quote.",
+  ],
+  [
     "Can beginners book horse riding?",
     "Yes, beginners are welcome to enquire. Tell us that it is your first time so the team can discuss a suitable introductory lesson or ride before confirming.",
   ],

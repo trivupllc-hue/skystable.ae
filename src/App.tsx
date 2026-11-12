@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import { MotionConfig } from "framer-motion";
 import Layout from "./components/Layout";
 import {
@@ -10,6 +10,7 @@ import {
   ServicePage,
   StablePage,
 } from "./pages";
+import { TransportPage } from "./components/Transport";
 import { BookingPage } from "./components/Booking";
 import { GalleryPage } from "./components/Gallery";
 import { TradingPage } from "./components/Trading";
@@ -21,6 +22,11 @@ export default function App() {
         <Route element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="experiences" element={<ExperiencesPage />} />
+          <Route path="horse-transport-sharjah" element={<TransportPage />} />
+          <Route
+            path="private-riding-lessons-sharjah"
+            element={<Navigate to="/horse-riding-classes-sharjah" replace />}
+          />
           <Route path="stable-services" element={<StablePage />} />
           <Route path="horse-trading" element={<TradingPage />} />
           <Route path="gallery" element={<GalleryPage />} />

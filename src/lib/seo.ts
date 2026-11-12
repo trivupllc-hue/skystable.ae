@@ -24,7 +24,7 @@ export function getMeta(path: string) {
     ],
     "/experiences": [
       "Horse Riding Experiences & Package Enquiries in Sharjah | Sky Stable",
-      "Explore riding classes, private lessons, desert and beach ride enquiries with Sky Stable in Sharjah. Request package prices on WhatsApp.",
+      "Explore riding classes and lessons, desert and beach rides, and horse transport with Sky Stable in Sharjah. Request prices on WhatsApp.",
     ],
     "/horse-trading": [
       "Horse Trading & Horses for Sale Enquiries UAE | Sky Stable",
@@ -44,7 +44,7 @@ export function getMeta(path: string) {
     ],
     "/contact": [
       "Contact Sky Stable in Sharjah | WhatsApp, Phone & Location",
-      "Contact Sky Stable on WhatsApp or by phone, view our Sharjah location and ask about riding, lessons, horse care and trading.",
+      "Contact Sky Stable on WhatsApp or by phone, view our Sharjah location and ask about riding, lessons, horse transport, care and trading.",
     ],
     "/book": [
       "Request a Horse Riding Booking in Sharjah | Sky Stable",

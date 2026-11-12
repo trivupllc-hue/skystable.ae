@@ -1,6 +1,6 @@
 import { useDubaiToday } from "../lib/useDubaiToday";
 import { useEffect, useRef, useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { Navigate, useNavigate, useSearchParams } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { ArrowUpRight, Check, MessageCircle, ShieldCheck } from "lucide-react";
@@ -14,9 +14,12 @@ import {
 import { Photo } from "./ui";
 export function BookingPage() {
   const [params] = useSearchParams();
+  if (params.get("service") === "Horse Transport Enquiry")
+    return <Navigate to="/horse-transport-sharjah#transport-enquiry" replace />;
   return <BookingForm key={params.toString()} />;
 }
 function BookingForm() {
+  const navigate = useNavigate();
   const today = useDubaiToday();
   const [params] = useSearchParams();
   const [url, setUrl] = useState("");
@@ -193,7 +196,15 @@ function BookingForm() {
               </legend>
               <label>
                 Service type *
-                <select {...register("service")} {...accessibility("service")}>
+                <select
+                  {...register("service", {
+                    onChange: (event) => {
+                      if (event.target.value === "Horse Transport Enquiry")
+                        navigate("/horse-transport-sharjah#transport-enquiry");
+                    },
+                  })}
+                  {...accessibility("service")}
+                >
                   {serviceTypes.map((s) => (
                     <option key={s}>{s}</option>
                   ))}

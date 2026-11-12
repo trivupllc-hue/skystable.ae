@@ -68,7 +68,14 @@ export function BookButton({
   const query = new URLSearchParams({ service });
   if (notes) query.set("notes", notes);
   return (
-    <Link to={`/book?${query}`} className={`button ${className}`}>
+    <Link
+      to={
+        service === "Horse Transport Enquiry"
+          ? "/horse-transport-sharjah#transport-enquiry"
+          : `/book?${query}`
+      }
+      className={`button ${className}`}
+    >
       {children}
       <ArrowUpRight size={17} />
     </Link>

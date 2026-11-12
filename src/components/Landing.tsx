@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { useForm } from "react-hook-form";
+import { useForm, useWatch } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
   ArrowRight,
@@ -18,6 +18,7 @@ import {
   Mountain,
   ShieldCheck,
   Users,
+  Truck,
   Waves,
 } from "lucide-react";
 import { faqs } from "../data/content";
@@ -36,6 +37,7 @@ export function LandingBooking() {
   const [preparedUrl, setPreparedUrl] = useState("");
   const {
     register,
+    control,
     handleSubmit,
     formState: { errors },
   } = useForm<QuickBookingValues>({
@@ -49,6 +51,7 @@ export function LandingBooking() {
       phone: "",
     },
   });
+  const selectedService = useWatch({ control, name: "service" });
   const inputProps = (key: keyof QuickBookingValues) => ({
     "aria-invalid": !!errors[key],
     "aria-describedby": errors[key] ? `quick-${key}-error` : undefined,
@@ -102,6 +105,7 @@ export function LandingBooking() {
         <form
           noValidate
           onSubmit={handleSubmit((values) => {
+            if (values.service === "Horse Transport Enquiry") return;
             const url = whatsappUrl(quickBookingMessage(values));
             setPreparedUrl(url);
             window.open(url, "_blank", "noopener,noreferrer");
@@ -116,80 +120,99 @@ export function LandingBooking() {
             </select>
             {error("service")}
           </label>
-          <label className="quick-date">
-            Date *
-            <input
-              type="date"
-              min={today}
-              {...register("date")}
-              {...inputProps("date")}
-            />
-            {error("date")}
-          </label>
-          <label className="quick-time">
-            Time · UAE *
-            <select {...register("time")} {...inputProps("time")}>
-              <option value="">Select time</option>
-              {site.rideTimeSlots.map((time) => (
-                <option key={time} value={time}>
-                  {time}
-                </option>
-              ))}
-            </select>
-            {error("time")}
-          </label>
-          <label className="quick-riders">
-            Riders *
-            <select
-              {...register("riders", { valueAsNumber: true })}
-              {...inputProps("riders")}
-            >
-              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 20, 30, 40, 50].map((n) => (
-                <option key={n} value={n}>
-                  {n} {n === 1 ? "rider" : "riders"}
-                </option>
-              ))}
-            </select>
-            {error("riders")}
-          </label>
-          <label className="quick-name">
-            Your name *
-            <input
-              placeholder="Enter your name"
-              autoComplete="name"
-              maxLength={100}
-              {...register("name")}
-              {...inputProps("name")}
-            />
-            {error("name")}
-          </label>
-          <label className="quick-phone">
-            Mobile / WhatsApp *
-            <input
-              type="tel"
-              placeholder="+971 · Your mobile number"
-              autoComplete="tel"
-              {...register("phone")}
-              {...inputProps("phone")}
-            />
-            {error("phone")}
-          </label>
-          <button type="submit" className="button quick-submit">
-            <MessageCircle size={20} />
-            Book on WhatsApp
-          </button>
-          <p className="compact-note">
-            <Check size={13} />
-            You choose when to send. Availability and price confirmed by our
-            team.
-          </p>
+          {selectedService === "Horse Transport Enquiry" ? (
+            <div className="quick-transport">
+              <p>
+                Moving a horse? Tell us the pickup, destination and whether you
+                need a return trip.
+              </p>
+              <Link
+                className="button"
+                to="/horse-transport-sharjah#transport-enquiry"
+              >
+                Plan Horse Transport <Truck size={18} />
+              </Link>
+            </div>
+          ) : (
+            <>
+              <label className="quick-date">
+                Date *
+                <input
+                  type="date"
+                  min={today}
+                  {...register("date")}
+                  {...inputProps("date")}
+                />
+                {error("date")}
+              </label>
+              <label className="quick-time">
+                Time · UAE *
+                <select {...register("time")} {...inputProps("time")}>
+                  <option value="">Select time</option>
+                  {site.rideTimeSlots.map((time) => (
+                    <option key={time} value={time}>
+                      {time}
+                    </option>
+                  ))}
+                </select>
+                {error("time")}
+              </label>
+              <label className="quick-riders">
+                Riders *
+                <select
+                  {...register("riders", { valueAsNumber: true })}
+                  {...inputProps("riders")}
+                >
+                  {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 20, 30, 40, 50].map(
+                    (n) => (
+                      <option key={n} value={n}>
+                        {n} {n === 1 ? "rider" : "riders"}
+                      </option>
+                    ),
+                  )}
+                </select>
+                {error("riders")}
+              </label>
+              <label className="quick-name">
+                Your name *
+                <input
+                  placeholder="Enter your name"
+                  autoComplete="name"
+                  maxLength={100}
+                  {...register("name")}
+                  {...inputProps("name")}
+                />
+                {error("name")}
+              </label>
+              <label className="quick-phone">
+                Mobile / WhatsApp *
+                <input
+                  type="tel"
+                  placeholder="+971 · Your mobile number"
+                  autoComplete="tel"
+                  {...register("phone")}
+                  {...inputProps("phone")}
+                />
+                {error("phone")}
+              </label>
+              <button type="submit" className="button quick-submit">
+                <MessageCircle size={20} />
+                Book on WhatsApp
+              </button>
+              <p className="compact-note">
+                <Check size={13} />
+                You choose when to send. Availability and price confirmed by our
+                team.
+              </p>
+            </>
+          )}
         </form>
       )}
     </section>
   );
 }
 
-const serviceIcons = [GraduationCap, Users, Mountain, Waves, House, Handshake];
+const serviceIcons = [GraduationCap, Truck, Mountain, Waves, House, Handshake];
 const featureItems = [
   {
     icon: GraduationCap,
@@ -245,7 +268,10 @@ export default function Landing() {
               Horse Riding
               <br /> in Sharjah
             </h1>
-            <h2>Classes · Lessons · Stable Services · Horse Trading</h2>
+            <h2>
+              Classes & Lessons · Horse Transport · Stable Services · Horse
+              Trading
+            </h2>
             <p>
               Experience the joy of horse riding — from your first lesson to
               desert adventures and coastal escapes. Your next unforgettable
@@ -267,8 +293,9 @@ export default function Landing() {
           <p className="reference-eyebrow">OUR SERVICES</p>
           <h2>Complete Horse Riding Services in Sharjah</h2>
           <p>
-            From learning to ride to new adventures, stable care and horse
-            trading — discover your place in the equestrian world.
+            From learning to ride to new adventures, horse transport, stable
+            care and horse trading — discover your place in the equestrian
+            world.
           </p>
         </div>
         <div className="reference-service-grid">

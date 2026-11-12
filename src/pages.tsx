@@ -54,7 +54,7 @@ export function ExperiencesPage() {
       <PageIntro
         eyebrow="SKY STABLE · SHARJAH"
         title="Find your next unforgettable moment."
-        description="From your first lesson to a quiet desert escape. Explore the possibilities and let’s plan your ride."
+        description="From classes and private lessons to desert rides and horse transport. Explore our services and let’s plan what you need."
       />
       <Experiences />
       <Packages />
@@ -100,6 +100,19 @@ export function ServicePage() {
         </div>
         <aside className="service-aside">
           <ShieldCheck />
+          {service.booking === "Horse Riding Classes" && (
+            <>
+              <h3>Private lessons, your own pace.</h3>
+              <p>
+                Prefer one-to-one instruction? Focus on the skills that matter
+                to you, with a session planned around your goals, experience and
+                preferred duration.
+              </p>
+              <BookButton service="Private Horse Riding">
+                Enquire About Private Lessons
+              </BookButton>
+            </>
+          )}
           <h3>Before your visit</h3>
           <p>
             Tell us about your riding experience and any support you may need.

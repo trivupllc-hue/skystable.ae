@@ -124,7 +124,10 @@ export function Experiences({ full = true }: { full?: boolean }) {
                     <ArrowRight size={14} />
                   </Link>
                   <BookButton service={s.booking} className="card-book">
-                    {i > 3 ? "Enquire" : "Book"} on WhatsApp
+                    {s.booking === "Horse Transport Enquiry" || i > 3
+                      ? "Enquire"
+                      : "Book"}{" "}
+                    on WhatsApp
                   </BookButton>
                 </div>
               </div>

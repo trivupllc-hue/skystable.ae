@@ -40,3 +40,6 @@ All routes now use Georgia bold headings and DM Sans body text. Body copy and fo
 The floating contact controls follow the owner’s trivup.com reference: circular green WhatsApp with a gentle expanding ring, and a blue Call button stacked above it on screens up to 640px. Call is hidden above 640px. Both use Sky Stable’s confirmed number. The former mobile contact bar is replaced by these controls; Book Now remains in the header and page content. Reduced-motion preferences disable the ring animation.
 
 Desktop homepage and experiences-page screenshots, plus mobile homepage and booking-page screenshots, were reviewed after deployment. That review caught a missing space in the mobile booking heading, which was corrected. Build validation covered all 14 routes, links and local assets; 21 existing tests and lint passed.
+
+
+The first two service cards now represent **Riding Classes & Lessons** and **Horse Transport**. The transport card uses a truck icon and existing illustrative horse photography. It retains the same ivory card surface and gold action styling. The combined learning page includes private-session information and its booking action; the transport page uses a matching black/gold enquiry panel with journey-specific fields.

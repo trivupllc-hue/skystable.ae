@@ -15,7 +15,7 @@ export const site = {
   seo: {
     baseUrl: "https://skystable.ae",
     description:
-      "Discover horse riding in Sharjah with Sky Stable. Explore desert rides, beach riding enquiries, riding lessons, stable services and horse trading. Book through WhatsApp.",
+      "Discover horse riding in Sharjah with Sky Stable. Explore desert rides, beach riding enquiries, riding lessons, horse transport, stable services and horse trading. Book through WhatsApp.",
   },
   rideTimeSlots: ["06:00", "07:00", "08:00", "16:00", "17:00", "18:00"],
   durations: [
@@ -45,6 +45,7 @@ export const serviceTypes = [
   "Advanced Riding Lesson",
   "Private Horse Riding",
   "Children's Riding Lessons",
+  "Horse Transport Enquiry",
   "Stable Services Enquiry",
   "Horse Buying Enquiry",
   "Horse Selling Enquiry",
@@ -63,36 +64,37 @@ export const services: {
 }[] = [
   {
     slug: "horse-riding-classes-sharjah",
-    title: "Horse Riding Classes",
+    title: "Riding Classes & Lessons",
     eyebrow: "LEARN & CONNECT",
     description:
-      "Build confidence in the saddle, one meaningful lesson at a time.",
+      "Group classes and private lessons, shaped around your experience and goals.",
     image: "lessons",
     alt: "Rider practising in an outdoor riding arena",
     booking: "Horse Riding Classes",
     details:
-      "Explore riding instruction in Sharjah, from your first introduction to a horse to developing your technique. Tell us your experience and goals so the team can discuss a suitable instructor and session.",
+      "Explore horse riding classes and private lessons in Sharjah, from your first introduction to a horse to developing your technique. Choose group learning or request one-to-one instruction at your own pace. Tell us your experience and goals so the team can help plan a suitable session.",
     points: [
       "Beginner, intermediate and advanced lesson enquiries",
+      "Group classes, private sessions and children’s lesson enquiries",
       "Discuss balance, posture, steering and horse awareness",
       "Lesson plans and instructor details confirmed by the team",
     ],
   },
   {
-    slug: "private-riding-lessons-sharjah",
-    title: "Private Riding Lessons",
-    eyebrow: "YOUR OWN PACE",
+    slug: "horse-transport-sharjah",
+    title: "Horse Transport",
+    eyebrow: "FROM HERE TO THERE",
     description:
-      "Personalised time in the saddle, shaped around you and your goals.",
-    image: "private",
-    alt: "Horse and rider during a riding session",
-    booking: "Private Horse Riding",
+      "Move your horse for a one-off journey or a short visit with a return trip.",
+    image: "horse",
+    alt: "Portrait of a horse",
+    booking: "Horse Transport Enquiry",
     details:
-      "A private session gives you space to focus on the skills that matter to you. Enquire about individual instruction, your preferred pace and a session tailored to your riding experience.",
+      "Need to move your horse from one place to another? Request a one-way move or transport for a short visit with collection a few hours later. Share the pickup and destination, your preferred timing and the number of horses. The team will confirm the arrangements and quote before you book.",
     points: [
-      "Share individual learning goals",
-      "Request a preferred session duration",
-      "Private arrangements and pricing confirmed on enquiry",
+      "One-off, one-way horse moves",
+      "Short visits with a requested return journey",
+      "Pickup, destination, timing and price confirmed on enquiry",
     ],
   },
   {

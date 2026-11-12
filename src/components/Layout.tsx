@@ -189,13 +189,14 @@ export default function Layout() {
           <div>
             <h3>Discover</h3>
             <Link to="/experiences">Our experiences</Link>
-            <Link to="/horse-riding-classes-sharjah">Riding lessons</Link>
+            <Link to="/horse-riding-classes-sharjah">Classes & lessons</Link>
             <Link to="/gallery">Our gallery</Link>
             <Link to="/about">The Sky Stable story</Link>
           </div>
           <div>
             <h3>Equestrian life</h3>
             <Link to="/stable-services">Stable services</Link>
+            <Link to="/horse-transport-sharjah">Horse transport</Link>
             <Link to="/horse-trading">Horse trading</Link>
             <Link to="/experiences#packages">Riding packages</Link>
             <Link to="/contact#faq">Your questions, answered</Link>

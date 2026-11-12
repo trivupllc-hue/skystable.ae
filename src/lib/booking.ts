@@ -1,5 +1,11 @@
 import { z } from "zod";
 import { serviceTypes, site } from "../data/site";
+/** Display UAE booking times in 12-hour format; form values remain HH:mm. */
+export function formatTime(time: string) {
+  const [hours, minutes] = time.split(":");
+  const hour = Number(hours);
+  return `${hour % 12 || 12}:${minutes} ${hour >= 12 ? "PM" : "AM"}`;
+}
 export function dubaiToday(now = new Date()) {
   const parts = new Intl.DateTimeFormat("en-CA", {
     timeZone: "Asia/Dubai",
@@ -104,10 +110,10 @@ export const quickBookingSchema = z
   );
 export type QuickBookingValues = z.infer<typeof quickBookingSchema>;
 export function quickBookingMessage(v: QuickBookingValues) {
-  return `🐎 ${site.name.toUpperCase()} - RIDE ENQUIRY\n\nService: ${v.service}\nPreferred date: ${v.date}\nPreferred time: ${v.time} (Asia/Dubai, UTC+4)\nTotal riders: ${v.riders}\nName: ${v.name}\nPhone: ${v.phone}\n\nPlease confirm availability, price and meeting point. Rider ages, experience and duration to be discussed. Thank you!`;
+  return `🐎 ${site.name.toUpperCase()} - RIDE ENQUIRY\n\nService: ${v.service}\nPreferred date: ${v.date}\nPreferred time: ${formatTime(v.time)} (Asia/Dubai, UTC+4)\nTotal riders: ${v.riders}\nName: ${v.name}\nPhone: ${v.phone}\n\nPlease confirm availability, price and meeting point. Rider ages, experience and duration to be discussed. Thank you!`;
 }
 export function bookingMessage(v: BookingValues) {
-  return `🐎 ${site.name.toUpperCase()} - NEW BOOKING REQUEST\n\nService: ${v.service}\nDate: ${v.date}\nPreferred Time: ${v.time} (Asia/Dubai, UTC+4)\nRiders: ${v.riders}\nAdults / Children: ${v.adults} adults, ${v.children} children\nDuration: ${v.duration}\nExperience: ${v.experience}\nName: ${v.name}\nPhone: ${v.phone}${v.email ? `\nEmail: ${v.email}` : ""}\nSpecial Requests: ${v.notes || "None"}\n\nPlease confirm availability and pricing.\n\nThank you!`;
+  return `🐎 ${site.name.toUpperCase()} - NEW BOOKING REQUEST\n\nService: ${v.service}\nDate: ${v.date}\nPreferred Time: ${formatTime(v.time)} (Asia/Dubai, UTC+4)\nRiders: ${v.riders}\nAdults / Children: ${v.adults} adults, ${v.children} children\nDuration: ${v.duration}\nExperience: ${v.experience}\nName: ${v.name}\nPhone: ${v.phone}${v.email ? `\nEmail: ${v.email}` : ""}\nSpecial Requests: ${v.notes || "None"}\n\nPlease confirm availability and pricing.\n\nThank you!`;
 }
 export function whatsappUrl(message: string) {
   return `https://wa.me/${site.whatsappNumber.replace(/\D/g, "")}?text=${encodeURIComponent(message)}`;
@@ -170,5 +176,5 @@ export const transportSchema = z
   );
 export type TransportValues = z.infer<typeof transportSchema>;
 export function transportMessage(v: TransportValues) {
-  return `🐎 ${site.name.toUpperCase()} - HORSE TRANSPORT ENQUIRY\n\nName: ${v.name}\nPhone: ${v.phone}\nPickup: ${v.pickup}\nDestination: ${v.destination}\nPreferred date: ${v.date}\nPreferred pickup time: ${v.time} (Asia/Dubai, UTC+4)\nHorses: ${v.horses}\nJourney: ${v.journey}${v.journey === "Short visit with return" ? `\nRequested return pickup: ${v.returnTime}` : ""}\nHorse / journey details: ${v.notes || "To discuss"}\n\nPlease confirm availability, transport arrangements and a quote before booking. Thank you!`;
+  return `🐎 ${site.name.toUpperCase()} - HORSE TRANSPORT ENQUIRY\n\nName: ${v.name}\nPhone: ${v.phone}\nPickup: ${v.pickup}\nDestination: ${v.destination}\nPreferred date: ${v.date}\nPreferred pickup time: ${formatTime(v.time)} (Asia/Dubai, UTC+4)\nHorses: ${v.horses}\nJourney: ${v.journey}${v.journey === "Short visit with return" ? `\nRequested return pickup: ${v.returnTime}` : ""}\nHorse / journey details: ${v.notes || "To discuss"}\n\nPlease confirm availability, transport arrangements and a quote before booking. Thank you!`;
 }

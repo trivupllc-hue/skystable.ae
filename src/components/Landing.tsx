@@ -27,6 +27,7 @@ import {
   quickBookingMessage,
   quickBookingSchema,
   whatsappUrl,
+  formatTime,
   type QuickBookingValues,
 } from "../lib/booking";
 import { useDubaiToday } from "../lib/useDubaiToday";
@@ -151,7 +152,7 @@ export function LandingBooking() {
                   <option value="">Select time</option>
                   {site.rideTimeSlots.map((time) => (
                     <option key={time} value={time}>
-                      {time}
+                      {formatTime(time)}
                     </option>
                   ))}
                 </select>

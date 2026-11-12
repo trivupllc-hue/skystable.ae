@@ -9,6 +9,7 @@ import {
   bookingMessage,
   bookingSchema,
   whatsappUrl,
+  formatTime,
   type BookingValues,
 } from "../lib/booking";
 import { Photo } from "./ui";
@@ -228,7 +229,7 @@ function BookingForm() {
                     <option value="">Choose a time</option>
                     {site.rideTimeSlots.map((t) => (
                       <option key={t} value={t}>
-                        {t} · UAE time
+                        {formatTime(t)} · UAE time
                       </option>
                     ))}
                   </select>

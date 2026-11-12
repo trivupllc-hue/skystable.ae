@@ -197,7 +197,7 @@ export const packages: {
       "Discuss a suitable desert route",
       "Request a morning or sunset time",
     ],
-    price: null,
+    price: "AED 110",
   },
   {
     name: "Beach Riding Experience",
@@ -209,7 +209,7 @@ export const packages: {
       "Check coastal route permissions",
       "Discuss conditions and meeting point",
     ],
-    price: null,
+    price: "AED 650",
   },
   {
     name: "Private Riding Session",
@@ -245,6 +245,6 @@ export const packages: {
       "Discuss a regular lesson schedule",
       "Ask about progression and session count",
     ],
-    price: null,
+    price: "AED 1,000",
   },
 ];

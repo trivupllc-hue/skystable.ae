@@ -6,5 +6,6 @@ dist/
 *.tsbuildinfo
 .DS_Store
 .vercel/
+.wrangler/
 
 *.code-workspace

@@ -35,7 +35,7 @@ Tests cover Dubai date rollover, past dates/times, impossible dates, rider total
 
 ## Before public launch
 
-1. The canonical domain is configured as **https://skystable.ae**. Production builds generate absolute canonical and social preview URLs, indexable pages and a populated sitemap for this domain. Connect this domain to the Cloudflare Pages project before launch. `VITE_SITE_URL`, if set, overrides `site.seo.baseUrl`; keep it consistent with this domain.
+1. The canonical domain is configured as **https://skystable.ae**. Production builds generate absolute canonical and social preview URLs, indexable pages and a populated sitemap for this domain. The Cloudflare deployment configuration connects this domain to the website. `VITE_SITE_URL`, if set, overrides `site.seo.baseUrl`; keep it consistent with this domain.
 2. Confirm service descriptions and preferred request slots with the owner. Package cards are clearly described as **enquiry ideas**, not confirmed products. Prices are “Request Price” until supplied.
 3. Replace illustrative photography with approved Sky Stable media when available, and update its captions/credits and stock-image disclosures accordingly. Current images are licensed Pexels stock and are explicitly labeled. They are not claimed as Sky Stable facilities, team members or horses.
 4. Add only verified opening hours, social profiles, trainer biographies, reviews and genuine sale listings. Empty values are intentionally omitted or shown as honest empty states.
@@ -65,7 +65,7 @@ Edit **`src/data/site.ts`**. Save, commit and redeploy.
 | `packages`                                 | Package names, requested durations, level, rider arrangements, discussion points and confirmed prices |
 | `site.trainers`, `site.reviews`            | Genuine information approved for publication                                                          |
 
-Keep route slugs stable after launch. If you change one, update the relevant navigation links and add a Vercel redirect from the old route. Editing business text alone does not require a route change.
+Keep route slugs stable after launch. If you change one, update the relevant navigation links and add a redirect from the old route in `public/_redirects`. Editing business text alone does not require a route change.
 
 ### Change package prices
 
@@ -118,28 +118,29 @@ git remote add origin https://github.com/trivupllc-hue/skystable.ae.git
 git push -u origin main
 ```
 
-Authenticate using GitHub’s normal browser or credential-manager flow. Do not paste tokens into project files. `.gitignore` excludes dependencies, build outputs, `.env` files and Vercel local state. Keep `package-lock.json` in Git for reproducible installs. If you already have a repository, skip `git init` and `git remote add` and use the existing remote.
+Authenticate using GitHub’s normal browser or credential-manager flow. Do not paste tokens into project files. `.gitignore` excludes dependencies, build outputs, `.env` files and local hosting-tool state. Keep `package-lock.json` in Git for reproducible installs. If you already have a repository, skip `git init` and `git remote add` and use the existing remote.
 
-## Deploy to Cloudflare Pages (current hosting plan)
+## Deploy to Cloudflare (current hosting)
 
-Your domain remains registered at nic.ae. Cloudflare already manages its DNS. Cloudflare Pages can host this static website and deploy updates from the existing GitHub repository; a Vercel account is not needed.
+The website uses **Cloudflare Workers Static Assets**, application name **`skystable-ae`**. Your domain remains registered at nic.ae and Cloudflare manages its DNS and HTTPS. No Vercel account is needed. This is a static deployment: no Worker script, database or server application is required.
 
-1. In the Cloudflare account that owns `skystable.ae`, open **Workers & Pages → Create application → Pages → Connect to Git**.
-2. Connect the GitHub account **trivupllc-hue**, granting access to **only `skystable.ae`** when selecting repositories. If Cloudflare already has access, select the existing connection.
-3. Select repository **trivupllc-hue/skystable.ae**, project name **skystable**, and production branch **main**.
-4. Set framework preset to **None** (the explicit build command handles Vite and prerendering), build command to **`npm run build`**, build output directory to **`dist`**, and leave the root directory empty.
-5. The committed `.node-version` selects Node.js **24**. If a dashboard environment setting overrides it, set `NODE_VERSION` to `24` in production and preview build settings. No API keys, database or other environment variables are needed.
-6. Select **Save and Deploy**. Wait for a successful deployment, then open the exact `pages.dev` URL Cloudflare provides. Check the homepage, a direct service-page URL and the booking form.
-7. In the Pages project, open **Custom domains → Set up a domain**, enter **`skystable.ae`**, and complete the setup. Because this domain uses Cloudflare DNS in the same account, Pages can create the required DNS record. Wait for the custom domain and HTTPS certificate to become active.
-8. Optionally add `www.skystable.ae` through Custom domains and configure a Cloudflare redirect to `https://skystable.ae`, preserving paths and query strings. The canonical domain is the apex domain.
+`wrangler.jsonc` selects the existing Cloudflare account, uploads `dist/`, connects `skystable.ae` and `www.skystable.ae`, serves clean URLs and returns the custom 404 for unknown pages. The canonical domain is **https://skystable.ae**. Public `workers.dev` and version-preview URLs are disabled.
 
-Do not add a guessed CNAME manually before associating the domain with the Pages project. Use the hostname and records shown for the actual project. Preserve unrelated DNS records.
+To deploy a change from this checkout:
 
-The `public/_headers` file supplies static response-security and asset-cache headers. The build produces actual HTML for all routes plus `404.html`, so it does not need a blanket SPA fallback. `vercel.json` remains available for an optional future deployment to Vercel; Cloudflare Pages does not use it.
+```sh
+npm run deploy
+```
 
-Future pushes to `main` rebuild the site automatically once the Git connection is configured. Verify `https://skystable.ae/robots.txt` and `/sitemap.xml` after launch, then submit the sitemap in Google Search Console.
+This rebuilds the site, checks the generated pages and uploads them using the pinned Cloudflare Wrangler CLI. It uses your existing Cloudflare login. On a new computer, run `npm ci`, then `npx --yes wrangler@4.160.1 login` and sign into the Cloudflare account that owns this domain before deploying. Never commit credentials.
 
-Official guides: [Git integration](https://developers.cloudflare.com/pages/get-started/git-integration/), [custom domains](https://developers.cloudflare.com/pages/configuration/custom-domains/), [build image and Node version](https://developers.cloudflare.com/pages/configuration/build-image/), [static response headers](https://developers.cloudflare.com/pages/configuration/headers/).
+Save source changes to GitHub with `git add`, `git commit` and `git push` as described above. **GitHub pushes do not automatically deploy yet**; run `npm run deploy` to publish. Automatic deployment can be connected later in Cloudflare's application settings after the owner authorizes the `trivupllc-hue/skystable.ae` GitHub integration.
+
+The `public/_headers` file supplies response-security and hashed-asset cache headers. All routes have actual HTML, so no blanket SPA fallback is needed. The committed `.node-version` selects Node.js 24 for compatible build environments. `vercel.json` is optional and is not used by Cloudflare.
+
+After deployment, check the homepage, a direct service-page URL, `/book`, `/robots.txt` and `/sitemap.xml`. Submit the sitemap in Google Search Console after domain verification.
+
+Official guides: [static assets](https://developers.cloudflare.com/workers/static-assets/), [custom domains](https://developers.cloudflare.com/workers/configuration/routing/custom-domains/), [HTML handling](https://developers.cloudflare.com/workers/static-assets/routing/advanced/html-handling/), [response headers](https://developers.cloudflare.com/workers/static-assets/headers/).
 
 ## Optional alternative: Vercel
 
@@ -181,7 +182,8 @@ scripts/verify-build.mjs   Generated-page, metadata, link and asset checks
 scripts/check-launch.ts    Owner configuration checks
 public/images/            Local optimized media and photo source credits
 tests/                    Business-rule and DOM interaction tests
-public/_headers           Cloudflare Pages response headers
+public/_headers           Cloudflare static response headers
+wrangler.jsonc            Cloudflare deployment and custom domains
 .node-version             Node version for Cloudflare builds
 vercel.json               Optional Vercel deployment settings
 ```

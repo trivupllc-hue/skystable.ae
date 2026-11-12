@@ -12,7 +12,8 @@
     "test": "vitest run",
     "check:launch": "tsx scripts/check-launch.ts",
     "format": "prettier --write src scripts tests *.json *.ts *.js index.html README.md",
-    "verify:build": "node scripts/verify-build.mjs"
+    "verify:build": "node scripts/verify-build.mjs",
+    "deploy": "npm run build && npm run verify:build && npx --yes wrangler@4.160.1 deploy"
   },
   "dependencies": {
     "@fontsource/cormorant-garamond": "^5.2.0",

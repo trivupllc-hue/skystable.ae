@@ -1,0 +1,430 @@
+/* One visual language, drawn from the owner-selected homepage. */
+:root {
+  --surface: #fffaf5;
+  --surface-border: #e9ddce;
+  --surface-shadow: 0 4px 7px #4a2c1618;
+  --button-gold: linear-gradient(180deg, #ffe298, #f4c650 55%, #eab438);
+}
+main {
+  background:
+    radial-gradient(ellipse at 6% 28%, #f4dfbb70, transparent 32%),
+    radial-gradient(ellipse at 96% 65%, #f3dfc970, transparent 36%), #faf4ec;
+  color: #171611;
+}
+.button,
+.reference-home .button {
+  background: var(--button-gold);
+  border: 1px solid #e3b650;
+  border-radius: 13px;
+  color: #15140f;
+  box-shadow: 0 3px 7px #9f702325;
+  gap: 10px;
+  padding: 12px 20px;
+  min-height: 46px;
+  font-size: 0.9375rem;
+}
+.button:hover,
+.reference-home .button:hover {
+  background: linear-gradient(#ffeab0, #f2c153);
+  border-color: #c99528;
+}
+.button-outline,
+.reference-home .button-outline {
+  background: transparent;
+  box-shadow: none;
+  color: #65430c;
+  border-color: #bc8b35;
+}
+.button-outline:hover,
+.reference-home .button-outline:hover {
+  background: #f5e7ce;
+}
+.button-glass {
+  background: #17171180;
+  color: #ffe5a2;
+  border-color: #d6b56d;
+  box-shadow: none;
+}
+.button-glass:hover {
+  background: #171711;
+  color: #fff;
+}
+.section {
+  padding-block: 64px;
+}
+.section-title {
+  max-width: 760px;
+}
+.section-title h2 {
+  letter-spacing: -0.7px;
+  margin-top: 12px;
+}
+.section-title h2 em,
+.service-detail h2 em,
+.booking-intro h1 em,
+.gallery-heading h1 em {
+  color: inherit;
+  font-style: normal;
+}
+.section-description {
+  max-width: 650px;
+  margin-top: 16px;
+  line-height: 1.7;
+}
+.eyebrow {
+  color: #946008;
+}
+.packages-section,
+.cream-section {
+  background: #f4e9da80;
+}
+.page-intro {
+  min-height: 350px;
+  color: #171611;
+  background: #f5e4cb;
+  border-bottom: 1px solid #e6d2b2;
+}
+.page-intro:after {
+  background: linear-gradient(
+    90deg,
+    #fff5e8 0%,
+    #fff0dfee 38%,
+    #fff0dfb8 60%,
+    #fff0df15 100%
+  );
+}
+.page-intro h1 {
+  max-width: 760px;
+  font-style: italic;
+}
+.page-intro .eyebrow {
+  color: #805207;
+}
+.page-intro p:not(.eyebrow) {
+  color: #383023;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+.experience-card,
+.package-card,
+.three-grid > article,
+.service-aside,
+.map-card,
+.seller-form,
+.empty-listings,
+.credit-card {
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: 12px;
+  box-shadow: var(--surface-shadow);
+}
+.experience-grid,
+.package-grid {
+  gap: 24px;
+}
+.experience-photo {
+  height: 215px;
+}
+.experience-copy {
+  padding: 20px;
+}
+.experience-copy h3 {
+  font-family: var(--font-sans);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+.experience-copy p,
+.three-grid p,
+.service-aside p {
+  color: #50483d;
+  line-height: 1.7;
+}
+.card-number {
+  display: none;
+}
+.circle-arrow {
+  border: 1px solid #ac790f;
+  color: #946008;
+  background: #fffaf5;
+}
+.card-actions {
+  padding-top: 16px;
+  gap: 14px;
+  align-items: center;
+}
+.card-actions .button,
+.experience-copy .card-actions .button {
+  font-size: 0.9375rem;
+  padding: 10px 14px;
+}
+.card-actions > a:first-child {
+  color: #80540b;
+  min-height: 44px;
+}
+.package-card {
+  padding: 24px;
+  overflow: hidden;
+}
+.package-cover {
+  width: calc(100% + 48px);
+  max-width: none;
+  height: 180px;
+  margin: -24px -24px 24px;
+}
+.package-index {
+  color: #946008;
+}
+.package-card h3 {
+  font-size: 1.5rem;
+}
+.package-price {
+  color: #946008;
+  font-size: 1.75rem;
+}
+.package-card > .button {
+  font-size: 0.9375rem;
+}
+.steps {
+  gap: 24px;
+  margin-top: 32px;
+}
+.step {
+  border: 1px solid var(--surface-border);
+  padding: 24px;
+  background: var(--surface);
+  border-radius: 12px;
+  box-shadow: var(--surface-shadow);
+}
+.step > span {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  font: 600 1rem var(--font-sans);
+  color: #171611;
+  background: var(--button-gold);
+}
+.step h3 {
+  font-size: 1.25rem;
+}
+.step p {
+  max-width: none;
+  color: #50483d;
+}
+.faq-item {
+  border: 1px solid var(--surface-border);
+  border-radius: 9px;
+  background: var(--surface);
+  box-shadow: 0 2px 4px #4a2c1612;
+  margin-bottom: 10px;
+  padding-inline: 18px;
+}
+.faq-item button {
+  padding-block: 16px;
+}
+.faq-item p {
+  padding-right: 0;
+  color: #50483d;
+}
+.booking-panel {
+  background: linear-gradient(115deg, #141612, #282720, #111310);
+  border: 2px solid #e1bf61;
+  border-radius: 20px;
+  box-shadow: 0 8px 22px #4a2c1620;
+}
+.booking-photo {
+  border-radius: 12px;
+}
+.booking-intro > p:not(.eyebrow):not(.fine-print) {
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 480px;
+}
+.booking-panel input,
+.booking-panel select,
+.booking-panel textarea,
+.seller-form input,
+.seller-form select,
+.seller-form textarea {
+  background: linear-gradient(#fff, #f4f1eb);
+  color: #25231f;
+  color-scheme: light;
+  border: 1px solid #d6cfc1;
+  border-radius: 7px;
+  min-height: 48px;
+}
+.booking-panel input::placeholder,
+.booking-panel textarea::placeholder {
+  color: #756e63;
+}
+.booking-panel [aria-invalid="true"] {
+  border: 2px solid #dc7562;
+}
+.booking-panel .button-outline {
+  color: #ffe3a1;
+  border-color: #be9b50;
+}
+.booking-panel .button-outline:hover {
+  background: #3e3521;
+}
+.gallery-filters button {
+  min-height: 44px;
+  border-radius: 9px;
+  padding: 10px 18px;
+  font-size: 0.9375rem;
+}
+.gallery-filters button.active,
+.gallery-filters button:hover {
+  background: var(--button-gold);
+  color: #171611;
+  border-color: #e3b650;
+}
+.gallery-tile {
+  border-radius: 12px;
+  box-shadow: var(--surface-shadow);
+}
+.about-copy,
+.contact-grid,
+.service-detail {
+  gap: 60px;
+}
+.final-cta h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.15;
+}
+.final-cta p:not(.eyebrow) {
+  font-size: 1rem;
+}
+.floating-contact {
+  position: fixed;
+  right: max(18px, env(safe-area-inset-right));
+  bottom: max(20px, env(safe-area-inset-bottom));
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 40;
+}
+.floating-contact a {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 30px #0e2a4d4d;
+  transition: transform 0.2s;
+}
+.floating-contact a:hover {
+  transform: translateY(-3px) scale(1.06);
+}
+.floating-contact svg {
+  width: 28px;
+  height: 28px;
+}
+.floating-contact .floating-chat {
+  position: relative;
+  background: #25d366;
+  color: #fff;
+}
+.floating-chat:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid #25d366;
+  animation: contact-ring 2.4s cubic-bezier(0, 0, 0.2, 1) infinite;
+  pointer-events: none;
+}
+.floating-contact .floating-call {
+  display: none;
+  background: #1a4e96;
+  color: #fff;
+  border: 2px solid #fff;
+}
+@keyframes contact-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  70%,
+  100% {
+    transform: scale(1.7);
+    opacity: 0;
+  }
+}
+@media (max-width: 1000px) {
+  .about-copy,
+  .contact-grid,
+  .service-detail {
+    gap: 36px;
+  }
+  .package-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 700px) {
+  .section {
+    padding-block: 44px;
+  }
+  .page-intro {
+    min-height: 320px;
+  }
+  .page-intro > .shell {
+    padding-block: 44px;
+  }
+  .page-intro:after {
+    background: linear-gradient(90deg, #fff4e8f2, #fff0dfd9 65%, #fff0dfa8);
+  }
+  .page-intro h1 {
+    font-size: 2.25rem;
+  }
+  .package-grid,
+  .steps {
+    grid-template-columns: 1fr;
+  }
+  .experience-photo {
+    height: 220px;
+  }
+  .experience-copy,
+  .service-aside,
+  .map-card,
+  .seller-form,
+  .three-grid > article,
+  .empty-listings {
+    padding: 24px;
+  }
+  .booking-panel {
+    padding: 22px 18px;
+  }
+  .site-footer {
+    padding-bottom: 100px;
+  }
+}
+@media (max-width: 640px) {
+  .floating-contact a {
+    width: 54px;
+    height: 54px;
+  }
+  .floating-contact .floating-call {
+    display: flex;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .floating-chat:after {
+    animation: none;
+    display: none;
+  }
+}
+@media print {
+  .floating-contact {
+    display: none;
+  }
+}
+
+.reference-hero-copy > p:not(.reference-eyebrow),
+.reference-side-heading > p:not(.reference-eyebrow) {
+  font-size: 1rem;
+  line-height: 1.7;
+}

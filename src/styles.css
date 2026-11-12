@@ -3,7 +3,7 @@
   --color-gold: #d5a63d;
   --color-ivory: #faf6ef;
   --font-sans: "DM Sans", sans-serif;
-  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-serif: Georgia, "Times New Roman", serif;
 }
 :root {
   font-family: "DM Sans", sans-serif;
@@ -70,11 +70,11 @@ p {
 h1,
 h2,
 h3 {
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-weight: 400;
+  font-family: var(--font-serif);
+  font-weight: 700;
 }
 em {
-  font-weight: 400;
+  font-weight: inherit;
 }
 p {
   line-height: 1.8;
@@ -115,7 +115,7 @@ a {
 }
 .eyebrow {
   font-family: "DM Sans", sans-serif;
-  font-size: 10px;
+  font-size: 0.875rem;
   letter-spacing: 2.1px;
   font-weight: 600;
   line-height: 1.65;
@@ -139,7 +139,7 @@ a {
   border: 1px solid var(--gold);
   background: var(--gold);
   color: #18140c;
-  font-size: 12px;
+  font-size: 0.875rem;
   font-weight: 600;
   border-radius: 3px;
   transition:
@@ -199,7 +199,7 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 12px;
+  font-size: 0.875rem;
   font-weight: 600;
   background: none;
   padding: 8px 0;
@@ -257,7 +257,7 @@ a {
   align-items: center;
   justify-content: space-between;
   padding-inline: 48px;
-  font-size: 9px;
+  font-size: 0.875rem;
   letter-spacing: 0.6px;
   color: #c4bba9;
 }
@@ -268,7 +268,7 @@ a {
   align-items: center;
 }
 .header-top > span:nth-child(2) {
-  font-size: 9px;
+  font-size: 0.875rem;
   letter-spacing: 1px;
 }
 .header-main {
@@ -289,9 +289,9 @@ a {
   height: 51px;
 }
 .logo > span {
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 30px;
-  font-weight: 500;
+  font-family: var(--font-serif);
+  font-size: 1.875rem;
+  font-weight: 700;
   line-height: 1;
 }
 .logo small {
@@ -299,7 +299,7 @@ a {
   font-family: "DM Sans", sans-serif;
   font-weight: 400;
   letter-spacing: 4px;
-  font-size: 7px;
+  font-size: 0.875rem;
   text-align: center;
   margin-top: 8px;
 }
@@ -311,7 +311,7 @@ a {
   flex: 1;
 }
 .header-main nav a {
-  font-size: 10px;
+  font-size: 0.875rem;
   white-space: nowrap;
   position: relative;
   padding: 12px 0;
@@ -337,7 +337,7 @@ a {
 .header-book {
   min-height: 40px;
   padding: 10px 16px;
-  font-size: 10px;
+  font-size: 0.875rem;
   gap: 12px;
 }
 .menu-toggle {
@@ -372,8 +372,9 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 28px;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.75rem;
   border-bottom: 1px solid #ffffff20;
   padding: 15px 0;
 }
@@ -410,7 +411,7 @@ a {
 }
 .hero .eyebrow {
   color: #e7c77c;
-  font-size: 9px;
+  font-size: 0.875rem;
   letter-spacing: 2.6px;
 }
 .hero h1 {
@@ -424,21 +425,21 @@ a {
 }
 .hero h2 {
   font-family: "DM Sans", sans-serif;
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: 400;
   letter-spacing: 0.15px;
   line-height: 1.6;
   margin-bottom: 16px;
 }
 .hero-description {
-  font-size: 12px;
+  font-size: 1rem;
   color: #e2ded6;
   max-width: 435px;
   line-height: 1.9;
   margin-bottom: 28px;
 }
 .hero .button {
-  font-size: 11px;
+  font-size: 0.875rem;
   min-height: 48px;
 }
 .hero-whatsapp {
@@ -450,7 +451,7 @@ a {
   margin-top: 9px;
   min-height: 38px;
   gap: 8px;
-  font-size: 10px !important;
+  font-size: 0.875rem !important;
 }
 .hero-whatsapp:hover {
   background: none;
@@ -463,7 +464,7 @@ a {
   justify-content: space-between;
   align-items: center;
   margin-top: 40px;
-  font-size: 8px;
+  font-size: 0.875rem;
   letter-spacing: 1.8px;
   color: #d1c8b6;
 }
@@ -482,7 +483,7 @@ a {
   position: absolute;
   right: 24px;
   top: 18px;
-  font-size: 8px;
+  font-size: 0.875rem;
   color: #fff9;
   letter-spacing: 0.7px;
 }
@@ -501,12 +502,12 @@ a {
   box-shadow: 0 12px 30px #28211b12;
 }
 .quick-heading .eyebrow {
-  font-size: 8px;
+  font-size: 0.875rem;
   letter-spacing: 1.7px;
   color: #d4b471;
 }
 .quick-heading h2 {
-  font-size: 29px;
+  font-size: 1.8125rem;
   line-height: 1.1;
   margin-top: 9px;
 }
@@ -521,7 +522,7 @@ a {
   padding-left: 23px;
 }
 .quick-booking label > span {
-  font-size: 8px;
+  font-size: 0.875rem;
   letter-spacing: 1px;
   color: #c7b285;
   display: flex;
@@ -535,7 +536,7 @@ a {
   background: transparent;
   border: 0;
   color: var(--ivory);
-  font-size: 12px;
+  font-size: 1rem;
   padding: 8px 0;
   color-scheme: dark;
 }
@@ -543,13 +544,13 @@ a {
   background: #191919;
 }
 .quick-booking .button {
-  font-size: 11px;
+  font-size: 0.875rem;
   white-space: nowrap;
   padding-inline: 22px;
 }
 .quick-booking > p {
   grid-column: 2;
-  font-size: 8px;
+  font-size: 1rem;
   color: #bbb3a4;
   line-height: 1.5;
   margin-top: 14px;
@@ -565,7 +566,7 @@ a {
   display: flex;
   align-items: center;
   gap: 11px;
-  font-size: 10px;
+  font-size: 0.875rem;
   color: #6c6456;
 }
 .trust-strip svg {
@@ -578,7 +579,7 @@ a {
   max-width: 700px;
 }
 .section-title h2 {
-  font-size: 54px;
+  font-size: 3.375rem;
   line-height: 1.06;
   letter-spacing: -1.1px;
   margin-top: 16px;
@@ -587,7 +588,7 @@ a {
   color: #95702e;
 }
 .section-description {
-  font-size: 12px;
+  font-size: 1rem;
   max-width: 435px;
   color: var(--muted);
   margin-top: 21px;
@@ -634,7 +635,7 @@ a {
   position: absolute;
   left: 19px;
   top: 17px;
-  font-size: 10px;
+  font-size: 0.875rem;
   border: 1px solid #ffffff6b;
   color: #fff;
   border-radius: 50%;
@@ -664,16 +665,16 @@ a {
   padding: 25px 23px 17px;
 }
 .experience-copy .eyebrow {
-  font-size: 8px;
+  font-size: 0.875rem;
   letter-spacing: 1.7px;
 }
 .experience-copy h3 {
-  font-size: 29px;
+  font-size: 1.8125rem;
   line-height: 1.2;
   margin: 8px 0 10px;
 }
 .experience-copy p {
-  font-size: 11px;
+  font-size: 1rem;
   color: var(--muted);
   line-height: 1.9;
   min-height: 43px;
@@ -688,17 +689,17 @@ a {
   padding-top: 7px;
 }
 .card-actions > a {
-  font-size: 9px;
+  font-size: 0.875rem;
   display: flex;
   align-items: center;
   gap: 6px;
 }
 .card-actions .button {
-  font-size: 9px;
+  font-size: 0.875rem;
   gap: 4px;
 }
 .image-note {
-  font-size: 9px;
+  font-size: 0.875rem;
   line-height: 1.6;
   color: #7f776a;
   margin-top: 22px;
@@ -749,7 +750,7 @@ a {
   height: 128px;
   border-radius: 50%;
   text-align: center;
-  font-size: 7px;
+  font-size: 0.875rem;
   letter-spacing: 1.4px;
   display: flex;
   flex-direction: column;
@@ -763,7 +764,7 @@ a {
   height: 37px;
 }
 .story-copy > p {
-  font-size: 12px;
+  font-size: 1rem;
   line-height: 1.9;
   color: #6e675b;
   margin-top: 22px;
@@ -775,7 +776,7 @@ a {
   gap: 10px;
 }
 .story-points span {
-  font-size: 10px;
+  font-size: 0.875rem;
   display: flex;
   gap: 10px;
   align-items: center;
@@ -806,19 +807,20 @@ a {
   flex-direction: column;
 }
 .package-index {
-  font-size: 8px;
+  font-size: 0.875rem;
   letter-spacing: 1.5px;
   color: #8a744b;
 }
 .package-card h3 {
-  font-size: 30px;
+  font-size: 1.875rem;
   line-height: 1.15;
   margin-top: 18px;
   min-height: 70px;
 }
 .package-price {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 31px;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.9375rem;
   line-height: 1.2;
   margin: 8px 0 25px;
 }
@@ -826,7 +828,7 @@ a {
   display: block;
   font-family: "DM Sans", sans-serif;
   color: #777166;
-  font-size: 9px;
+  font-size: 0.875rem;
   line-height: 1.5;
   margin-top: 8px;
 }
@@ -842,7 +844,7 @@ a {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 10px;
+  font-size: 1rem;
   color: #6b6356;
 }
 .package-facts svg {
@@ -852,7 +854,7 @@ a {
   color: #a17b32;
 }
 .package-card .eyebrow {
-  font-size: 8px;
+  font-size: 0.875rem;
 }
 .inclusions {
   margin: 12px 0 25px;
@@ -861,7 +863,7 @@ a {
   gap: 10px;
 }
 .inclusions li {
-  font-size: 10px;
+  font-size: 1rem;
   color: #6b6356;
   display: flex;
   gap: 8px;
@@ -872,7 +874,7 @@ a {
 }
 .package-card > .button {
   margin-top: auto;
-  font-size: 10px;
+  font-size: 0.875rem;
 }
 .package-card.featured {
   background: #1c1c1c;
@@ -906,17 +908,18 @@ a {
   padding-top: 25px;
 }
 .step > span {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 44px;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 2.75rem;
   color: #b3955d;
   line-height: 1;
 }
 .step h3 {
-  font-size: 28px;
+  font-size: 1.75rem;
   margin: 17px 0 12px;
 }
 .step p {
-  font-size: 11px;
+  font-size: 1rem;
   color: #71695e;
   max-width: 300px;
 }
@@ -965,7 +968,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 12px;
+  font-size: 0.875rem;
 }
 .gallery-preview .image-note {
   color: #a49b8c;
@@ -985,14 +988,14 @@ a {
   justify-content: center;
 }
 .review-section h2 {
-  font-size: 49px;
+  font-size: 3.0625rem;
   margin: 17px 0;
 }
 .review-section h2 em {
   color: #967332;
 }
 .review-section > p:not(.eyebrow) {
-  font-size: 12px;
+  font-size: 0.875rem;
   color: #777064;
 }
 .review-section > .button {
@@ -1007,7 +1010,7 @@ a {
   flex: 1;
 }
 .review-grid cite {
-  font-size: 12px;
+  font-size: 0.875rem;
 }
 .faq-section {
   border-top: 1px solid var(--line);
@@ -1016,15 +1019,15 @@ a {
   gap: 100px;
 }
 .faq-section .section-title h2 {
-  font-size: 48px;
+  font-size: 3rem;
 }
 .faq-section > div > p {
-  font-size: 12px;
+  font-size: 1rem;
   color: #766f64;
   margin: 25px 0;
 }
 .faq-section .button {
-  font-size: 11px;
+  font-size: 0.875rem;
 }
 .faq-item {
   border-bottom: 1px solid #dcd3c3;
@@ -1041,7 +1044,7 @@ a {
   text-align: left;
   background: none;
   color: #332e25;
-  font-size: 12px;
+  font-size: 1rem;
   font-weight: 500;
   padding: 20px 0;
   line-height: 1.6;
@@ -1050,7 +1053,7 @@ a {
   color: #9d7a36;
 }
 .faq-item p {
-  font-size: 11px;
+  font-size: 1rem;
   line-height: 1.9;
   color: #6e675b;
   padding: 0 30px 22px 0;
@@ -1085,10 +1088,10 @@ a {
 }
 .final-cta .eyebrow {
   color: #d5b46c;
-  font-size: 9px;
+  font-size: 0.875rem;
 }
 .final-cta h2 {
-  font-size: 58px;
+  font-size: 3.625rem;
   line-height: 1.06;
   margin: 20px 0 13px;
 }
@@ -1096,7 +1099,7 @@ a {
   color: #e4c17a;
 }
 .final-cta p:not(.eyebrow) {
-  font-size: 12px;
+  font-size: 0.875rem;
   color: #d3cabc;
   margin-bottom: 22px;
 }
@@ -1112,7 +1115,7 @@ a {
   padding-bottom: 50px;
 }
 .footer-brand > p {
-  font-size: 11px;
+  font-size: 1rem;
   line-height: 1.9;
   margin: 23px 0 20px;
 }
@@ -1120,14 +1123,14 @@ a {
   display: flex;
   align-items: center;
   gap: 7px;
-  font-size: 10px;
+  font-size: 0.875rem;
 }
 .location svg {
   color: #c7a55d;
 }
 .footer-main h3 {
   font-family: "DM Sans", sans-serif;
-  font-size: 11px;
+  font-size: 0.875rem;
   color: #e0d6c3;
   font-weight: 500;
   margin: 10px 0 23px;
@@ -1136,7 +1139,7 @@ a {
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 10px;
+  font-size: 0.875rem;
   margin: 15px 0;
   line-height: 1.5;
 }
@@ -1144,7 +1147,7 @@ a {
   color: #e1bc6f;
 }
 .footer-main p {
-  font-size: 11px;
+  font-size: 1rem;
 }
 .footer-bottom {
   border-top: 1px solid #ffffff17;
@@ -1152,7 +1155,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 8px;
+  font-size: 0.875rem;
   color: #928878;
   gap: 20px;
 }
@@ -1161,7 +1164,7 @@ a {
   gap: 20px;
 }
 .demo-note {
-  font-size: 8px;
+  font-size: 0.875rem;
   color: #8e8475;
   padding-top: 20px;
   padding-bottom: 28px;
@@ -1188,7 +1191,7 @@ a {
   background: #fffdf6;
   color: #26241e;
   padding: 10px 15px;
-  font-size: 10px;
+  font-size: 0.875rem;
   border-radius: 4px;
   width: max-content;
   box-shadow: 0 4px 15px #0001;
@@ -1237,14 +1240,14 @@ a {
   color: #dfbd73;
 }
 .page-intro h1 {
-  font-size: 65px;
+  font-size: 4.0625rem;
   line-height: 1.02;
   letter-spacing: -1px;
   max-width: 850px;
   margin: 20px 0;
 }
 .page-intro p:not(.eyebrow) {
-  font-size: 13px;
+  font-size: 0.875rem;
   max-width: 580px;
   color: #e2d8c7;
 }
@@ -1254,7 +1257,7 @@ a {
   gap: 100px;
 }
 .service-detail h2 {
-  font-size: 51px;
+  font-size: 3.1875rem;
   line-height: 1.08;
   margin: 18px 0 25px;
 }
@@ -1262,7 +1265,7 @@ a {
   color: #947231;
 }
 .lead {
-  font-size: 16px !important;
+  font-size: 1rem !important;
   line-height: 1.85;
   color: #655e52;
 }
@@ -1276,7 +1279,7 @@ a {
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: 12px;
+  font-size: 1rem;
   color: #6b6254;
 }
 .service-points svg {
@@ -1285,7 +1288,7 @@ a {
   color: #9f7a35;
 }
 .fine-print {
-  font-size: 10px;
+  font-size: 0.875rem;
   line-height: 1.8;
   color: #7c7363;
   margin-top: 18px;
@@ -1303,11 +1306,11 @@ a {
   height: 29px;
 }
 .service-aside h3 {
-  font-size: 32px;
+  font-size: 2rem;
   margin: 20px 0;
 }
 .service-aside p {
-  font-size: 12px;
+  font-size: 1rem;
   color: #746958;
   margin-bottom: 20px;
 }
@@ -1323,11 +1326,11 @@ a {
   border-radius: 5px;
 }
 .three-grid h3 {
-  font-size: 31px;
+  font-size: 1.9375rem;
   margin: 15px 0;
 }
 .three-grid p {
-  font-size: 12px;
+  font-size: 1rem;
   color: #756b5b;
   margin-bottom: 22px;
 }
@@ -1340,7 +1343,7 @@ a {
 }
 .stable-grid .button {
   margin-top: auto;
-  font-size: 11px;
+  font-size: 0.875rem;
 }
 .about-copy {
   display: grid;
@@ -1348,7 +1351,7 @@ a {
   gap: 100px;
 }
 .about-copy > div > p {
-  font-size: 13px;
+  font-size: 1rem;
   color: #6f6657;
   margin-bottom: 25px;
 }
@@ -1365,7 +1368,7 @@ a {
   gap: 100px;
 }
 .contact-grid > div > p {
-  font-size: 13px;
+  font-size: 1rem;
   color: #736957;
   margin-top: 22px;
 }
@@ -1373,18 +1376,19 @@ a {
   margin: 28px 0;
 }
 .contact-line > span {
-  font-size: 9px;
+  font-size: 0.875rem;
   letter-spacing: 1.5px;
   color: #8d7139;
   display: block;
   margin-bottom: 8px;
 }
 .contact-line > a {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 30px;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.875rem;
 }
 .contact-line > p {
-  font-size: 13px;
+  font-size: 1rem;
 }
 .map-card {
   padding: 35px;
@@ -1431,16 +1435,16 @@ a {
 }
 .map-art > span {
   z-index: 1;
-  font-size: 10px;
+  font-size: 0.875rem;
   letter-spacing: 3px;
   background: #eee6d6;
   padding: 5px;
 }
 .map-card h3 {
-  font-size: 31px;
+  font-size: 1.9375rem;
 }
 .map-card > p {
-  font-size: 12px !important;
+  font-size: 1rem !important;
   margin: 16px 0 25px;
 }
 .not-found {
@@ -1451,11 +1455,11 @@ a {
   justify-content: center;
 }
 .not-found h1 {
-  font-size: 65px;
+  font-size: 4.0625rem;
   margin: 20px 0;
 }
 .not-found > p:not(.eyebrow) {
-  font-size: 14px;
+  font-size: 0.875rem;
   margin-bottom: 25px;
 }
 .booking-page {
@@ -1466,7 +1470,7 @@ a {
   align-items: start;
 }
 .booking-intro h1 {
-  font-size: 80px;
+  font-size: 5rem;
   line-height: 0.98;
   margin: 20px 0 25px;
 }
@@ -1474,7 +1478,7 @@ a {
   color: #a17b32;
 }
 .booking-intro > p:not(.eyebrow):not(.fine-print) {
-  font-size: 13px;
+  font-size: 0.875rem;
   color: #736858;
   max-width: 350px;
 }
@@ -1499,10 +1503,10 @@ a {
   width: 22px;
 }
 .booking-reassurance h3 {
-  font-size: 25px;
+  font-size: 1.5625rem;
 }
 .booking-reassurance p {
-  font-size: 11px;
+  font-size: 1rem;
   color: #7d7262;
   margin-top: 12px;
 }
@@ -1523,11 +1527,11 @@ a {
   margin-bottom: 28px;
 }
 .panel-heading .eyebrow {
-  font-size: 9px;
+  font-size: 0.875rem;
   color: #dfbb6e;
 }
 .panel-heading > span:last-child {
-  font-size: 8px;
+  font-size: 0.875rem;
   letter-spacing: 1px;
   color: #b6a98f;
 }
@@ -1535,14 +1539,15 @@ a {
   display: flex;
   align-items: center;
   gap: 11px;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 28px;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.75rem;
   margin-bottom: 23px;
 }
 .booking-panel legend > span {
   font-family: "DM Sans", sans-serif;
   color: #c4a66b;
-  font-size: 10px;
+  font-size: 0.875rem;
   border: 1px solid #6d5b3b;
   border-radius: 50%;
   display: flex;
@@ -1559,7 +1564,7 @@ a {
 .booking-panel label,
 .seller-form label {
   display: block;
-  font-size: 10px;
+  font-size: 0.875rem;
   color: #e3dacc;
   line-height: 1.5;
   margin-bottom: 17px;
@@ -1574,7 +1579,7 @@ a {
   color: #f3eee5;
   border-radius: 3px;
   padding: 12px 11px;
-  font-size: 12px;
+  font-size: 1rem;
   margin-top: 8px;
   min-height: 45px;
   color-scheme: dark;
@@ -1597,19 +1602,19 @@ a {
   gap: 12px;
 }
 .field-hint {
-  font-size: 9px;
+  font-size: 0.875rem;
   line-height: 1.7;
   color: #b6ac9a;
   margin: -5px 0 18px;
 }
 .optional {
-  font-size: 9px;
+  font-size: 0.875rem;
   color: #a89b87;
   font-weight: 400;
 }
 .field-error {
   display: block;
-  font-size: 10px;
+  font-size: 0.875rem;
   line-height: 1.6;
   color: #ffc6b6;
   margin-top: 6px;
@@ -1621,7 +1626,7 @@ a {
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  font-size: 10px;
+  font-size: 1rem;
   color: #c3b8a5;
   line-height: 1.8;
   margin-bottom: 22px;
@@ -1633,12 +1638,12 @@ a {
 .booking-submit .button {
   width: 100%;
   min-height: 53px;
-  font-size: 12px;
+  font-size: 0.875rem;
 }
 .booking-submit > span {
   display: block;
   text-align: center;
-  font-size: 9px;
+  font-size: 0.875rem;
   color: #bfb29d;
   line-height: 1.7;
   margin-top: 13px;
@@ -1659,10 +1664,10 @@ a {
   margin-bottom: 25px;
 }
 .booking-success h2 {
-  font-size: 44px;
+  font-size: 2.75rem;
 }
 .booking-success > p {
-  font-size: 12px;
+  font-size: 1rem;
   color: #c0b5a2;
   margin: 22px 0;
 }
@@ -1672,7 +1677,7 @@ a {
 }
 .booking-success details {
   margin: 25px 0;
-  font-size: 12px;
+  font-size: 0.875rem;
 }
 .booking-success summary {
   cursor: pointer;
@@ -1682,7 +1687,7 @@ a {
 .booking-success pre {
   white-space: pre-wrap;
   overflow-wrap: anywhere;
-  font-size: 10px;
+  font-size: 0.875rem;
   line-height: 1.8;
   font-family: inherit;
   background: #121212;
@@ -1693,14 +1698,14 @@ a {
 .booking-success .button-outline {
   color: #e6cf9c;
   border-color: #89713f;
-  font-size: 10px;
+  font-size: 0.875rem;
 }
 .booking-success .button-outline:hover {
   background: #3f382c;
 }
 .booking-success .text-button {
   color: #bfa978;
-  font-size: 10px;
+  font-size: 0.875rem;
 }
 .selling-grid {
   display: grid;
@@ -1708,7 +1713,7 @@ a {
   gap: 80px;
 }
 .selling-grid > div > p {
-  font-size: 13px;
+  font-size: 1rem;
   color: #756956;
   margin-top: 25px;
 }
@@ -1725,7 +1730,7 @@ a {
   border: 1px solid #c7bda8;
   border-radius: 3px;
   padding: 12px;
-  font-size: 12px;
+  font-size: 1rem;
   background: #fffdf8;
   margin-top: 8px;
   color: #28231d;
@@ -1744,11 +1749,11 @@ a {
   margin-left: 20px;
 }
 .seller-form h2 {
-  font-size: 40px;
+  font-size: 2.5rem;
   margin: 20px 0;
 }
 .seller-form > div > p {
-  font-size: 13px;
+  font-size: 1rem;
   color: #776952;
 }
 .empty-listings {
@@ -1759,18 +1764,19 @@ a {
   text-align: center;
 }
 .line-horse {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 55px;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 3.4375rem;
   color: #9f7b37;
 }
 .empty-listings h3 {
-  font-size: 38px;
+  font-size: 2.375rem;
   margin: 10px 0 20px;
 }
 .empty-listings p {
   max-width: 550px;
   margin: 0 auto 25px;
-  font-size: 13px;
+  font-size: 1rem;
   color: #776b58;
 }
 .horse-listings article img {
@@ -1781,7 +1787,7 @@ a {
 .horse-listings dl > div {
   display: flex;
   justify-content: space-between;
-  font-size: 12px;
+  font-size: 0.875rem;
   border-bottom: 1px solid #ded2be;
   padding-block: 10px;
   gap: 10px;
@@ -1790,7 +1796,7 @@ a {
   margin: 0;
 }
 .horse-listings .button {
-  font-size: 11px;
+  font-size: 0.875rem;
   margin-top: 20px;
 }
 .gallery-heading {
@@ -1801,7 +1807,7 @@ a {
   justify-content: center;
 }
 .gallery-heading h1 {
-  font-size: 72px;
+  font-size: 4.5rem;
   line-height: 1;
   margin: 20px 0 25px;
   letter-spacing: -1.5px;
@@ -1810,7 +1816,7 @@ a {
   color: #a17d38;
 }
 .gallery-heading > p:not(.eyebrow) {
-  font-size: 12px;
+  font-size: 0.875rem;
   max-width: 610px;
   margin-inline: auto;
   color: #7b705d;
@@ -1827,7 +1833,7 @@ a {
   border: 1px solid #ccbea6;
   border-radius: 2px;
   padding: 11px 18px;
-  font-size: 10px;
+  font-size: 0.875rem;
   color: #796748;
   transition: background 0.2s;
 }
@@ -1873,13 +1879,14 @@ a {
   align-items: center;
   justify-content: space-between;
   text-align: left;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 25px;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.5625rem;
 }
 .gallery-tile small {
   display: block;
   font-family: "DM Sans", sans-serif;
-  font-size: 8px;
+  font-size: 0.875rem;
   letter-spacing: 1.3px;
   margin-bottom: 6px;
   text-transform: uppercase;
@@ -1927,12 +1934,12 @@ a {
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  font-size: 12px;
+  font-size: 0.875rem;
   color: #e5d9c1;
   padding-top: 20px;
 }
 .lightbox figcaption > span {
-  font-size: 10px;
+  font-size: 0.875rem;
   color: #b1a58f;
 }
 .lightbox-close {
@@ -1954,16 +1961,16 @@ a {
   max-width: 860px;
 }
 .prose h1 {
-  font-size: 64px;
+  font-size: 4rem;
   margin: 20px 0 35px;
   line-height: 1.06;
 }
 .prose h2 {
-  font-size: 32px;
+  font-size: 2rem;
   margin: 35px 0 13px;
 }
 .prose p {
-  font-size: 14px;
+  font-size: 1rem;
   color: #6a604f;
   margin-bottom: 20px;
 }
@@ -1985,14 +1992,14 @@ a {
   margin-bottom: 15px;
 }
 .credit-card h2 {
-  font-size: 25px;
+  font-size: 1.5625rem;
   margin: 10px 0;
 }
 .credit-card p {
-  font-size: 11px;
+  font-size: 1rem;
 }
 .credit-card a {
-  font-size: 11px;
+  font-size: 0.875rem;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -2004,10 +2011,10 @@ a {
     padding-top: 100px;
   }
   .hero h1 {
-    font-size: 108px;
+    font-size: 6.75rem;
   }
   .header-main nav a {
-    font-size: 11px;
+    font-size: 0.875rem;
   }
   .hero-bottom {
     margin-top: 60px;
@@ -2024,10 +2031,10 @@ a {
     gap: 13px;
   }
   .header-main nav a {
-    font-size: 9px;
+    font-size: 0.875rem;
   }
   .logo > span {
-    font-size: 27px;
+    font-size: 1.6875rem;
   }
   .logo > svg {
     width: 38px;
@@ -2048,7 +2055,7 @@ a {
     padding-inline: 13px;
   }
   .quick-heading h2 {
-    font-size: 26px;
+    font-size: 1.625rem;
   }
   .story-section,
   .faq-section,
@@ -2067,7 +2074,7 @@ a {
     padding-inline: 18px;
   }
   .experience-copy h3 {
-    font-size: 27px;
+    font-size: 1.6875rem;
   }
   .card-actions {
     flex-wrap: wrap;
@@ -2076,10 +2083,10 @@ a {
     padding: 23px;
   }
   .package-card h3 {
-    font-size: 28px;
+    font-size: 1.75rem;
   }
   .section-title h2 {
-    font-size: 49px;
+    font-size: 3.0625rem;
   }
   .selling-grid {
     gap: 50px;
@@ -2105,7 +2112,7 @@ a {
     min-height: 660px;
   }
   .hero h1 {
-    font-size: 84px;
+    font-size: 5.25rem;
   }
   .hero-shade {
     background: linear-gradient(90deg, #171510d9, #17151066 70%, #17151033);
@@ -2121,7 +2128,7 @@ a {
     margin-bottom: 23px;
   }
   .quick-heading h2 {
-    font-size: 26px;
+    font-size: 1.625rem;
     margin: 0;
   }
   .quick-heading h2 br {
@@ -2170,10 +2177,10 @@ a {
     width: 105px;
     height: 105px;
     right: -5px;
-    font-size: 6px;
+    font-size: 0.875rem;
   }
   .section-title h2 {
-    font-size: 43px;
+    font-size: 2.6875rem;
   }
   .package-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2185,13 +2192,13 @@ a {
     gap: 30px;
   }
   .step h3 {
-    font-size: 25px;
+    font-size: 1.5625rem;
   }
   .faq-section {
     gap: 45px;
   }
   .faq-section .section-title h2 {
-    font-size: 40px;
+    font-size: 2.5rem;
   }
   .gallery-preview-grid {
     grid-template-rows: 160px 160px;
@@ -2208,7 +2215,7 @@ a {
     gap: 30px;
   }
   .booking-intro h1 {
-    font-size: 63px;
+    font-size: 3.9375rem;
   }
   .booking-panel {
     padding: 25px;
@@ -2231,7 +2238,7 @@ a {
     gap: 40px;
   }
   .gallery-heading h1 {
-    font-size: 62px;
+    font-size: 3.875rem;
   }
   .selling-grid {
     gap: 30px;
@@ -2244,10 +2251,10 @@ a {
     columns: 2;
   }
   .page-intro h1 {
-    font-size: 58px;
+    font-size: 3.625rem;
   }
   .contact-grid .section-title h2 {
-    font-size: 44px;
+    font-size: 2.75rem;
   }
   .map-card {
     padding: 25px;
@@ -2260,7 +2267,7 @@ a {
   .header-top {
     height: 27px;
     padding-inline: 20px;
-    font-size: 8px;
+    font-size: 0.875rem;
   }
   .header-top > span:nth-child(2) {
     display: none;
@@ -2274,17 +2281,17 @@ a {
     height: 42px;
   }
   .logo > span {
-    font-size: 27px;
+    font-size: 1.6875rem;
   }
   .logo small {
-    font-size: 6px;
+    font-size: 0.875rem;
     letter-spacing: 3.5px;
     margin-top: 6px;
   }
   .header-main .header-book {
     min-height: 36px;
     padding: 9px 12px;
-    font-size: 9px;
+    font-size: 0.875rem;
     gap: 9px;
   }
   .header-main .header-book svg {
@@ -2309,25 +2316,25 @@ a {
     padding-bottom: 55px;
   }
   .hero .eyebrow {
-    font-size: 8px;
+    font-size: 0.875rem;
     letter-spacing: 1.5px;
     gap: 9px;
   }
   .hero h1 {
-    font-size: 72px;
+    font-size: 4.5rem;
     line-height: 1;
     letter-spacing: -1.8px;
     margin-top: 24px;
     margin-bottom: 26px;
   }
   .hero h2 {
-    font-size: 12px;
+    font-size: 0.875rem;
     max-width: 290px;
     line-height: 1.8;
     margin-bottom: 14px;
   }
   .hero-description {
-    font-size: 11px;
+    font-size: 1rem;
     line-height: 1.9;
     max-width: 330px;
     margin-bottom: 25px;
@@ -2337,7 +2344,7 @@ a {
   }
   .hero .button {
     padding: 13px 15px;
-    font-size: 10px;
+    font-size: 0.875rem;
     gap: 10px;
   }
   .hero-whatsapp {
@@ -2346,14 +2353,14 @@ a {
   }
   .hero-bottom {
     margin-top: 31px;
-    font-size: 7px;
+    font-size: 0.875rem;
     letter-spacing: 1.2px;
   }
   .hero-bottom > span:nth-child(2) {
     display: none;
   }
   .hero-photo-label {
-    font-size: 6px;
+    font-size: 0.875rem;
     right: 10px;
     top: 11px;
   }
@@ -2366,11 +2373,11 @@ a {
     margin-bottom: 20px;
   }
   .quick-heading h2 {
-    font-size: 28px;
+    font-size: 1.75rem;
     margin-top: 8px;
   }
   .quick-heading .eyebrow {
-    font-size: 7px;
+    font-size: 0.875rem;
     letter-spacing: 1.6px;
   }
   .quick-booking form {
@@ -2384,20 +2391,20 @@ a {
     padding-bottom: 6px;
   }
   .quick-booking label > span {
-    font-size: 8px;
+    font-size: 0.875rem;
   }
   .quick-booking input,
   .quick-booking select {
-    font-size: 12px;
+    font-size: 1rem;
     padding-block: 9px;
   }
   .quick-booking .button {
     margin-top: 4px;
-    font-size: 11px;
+    font-size: 0.875rem;
     min-height: 46px;
   }
   .quick-booking > p {
-    font-size: 8px;
+    font-size: 1rem;
     line-height: 1.7;
   }
   .trust-strip {
@@ -2407,7 +2414,7 @@ a {
     gap: 20px 15px;
   }
   .trust-strip > span {
-    font-size: 8px;
+    font-size: 0.875rem;
     gap: 8px;
     line-height: 1.6;
   }
@@ -2419,16 +2426,16 @@ a {
     padding-block: 60px;
   }
   .section-title h2 {
-    font-size: 43px;
+    font-size: 2.6875rem;
     margin-top: 13px;
     letter-spacing: -0.8px;
   }
   .eyebrow {
-    font-size: 8px;
+    font-size: 0.875rem;
     letter-spacing: 1.6px;
   }
   .section-description {
-    font-size: 11px;
+    font-size: 1rem;
     line-height: 1.9;
     margin-top: 18px;
   }
@@ -2449,13 +2456,13 @@ a {
     padding: 24px 22px 15px;
   }
   .experience-copy .eyebrow {
-    font-size: 8px;
+    font-size: 0.875rem;
   }
   .experience-copy h3 {
-    font-size: 31px;
+    font-size: 1.9375rem;
   }
   .experience-copy p {
-    font-size: 11px;
+    font-size: 1rem;
     min-height: auto;
   }
   .card-actions {
@@ -2465,10 +2472,10 @@ a {
   }
   .card-actions > a,
   .card-actions .button {
-    font-size: 10px;
+    font-size: 0.875rem;
   }
   .image-note {
-    font-size: 8px;
+    font-size: 0.875rem;
     line-height: 1.8;
   }
   .story-section {
@@ -2495,11 +2502,11 @@ a {
     height: 110px;
   }
   .story-copy > p {
-    font-size: 12px;
+    font-size: 1rem;
     margin-top: 20px;
   }
   .story-points span {
-    font-size: 10px;
+    font-size: 0.875rem;
   }
   .packages-section .section-title {
     margin-bottom: 30px;
@@ -2512,22 +2519,22 @@ a {
     padding: 28px;
   }
   .package-card h3 {
-    font-size: 33px;
+    font-size: 2.0625rem;
     min-height: auto;
     margin-bottom: 14px;
   }
   .package-price {
-    font-size: 33px;
+    font-size: 2.0625rem;
   }
   .package-price small {
-    font-size: 9px;
+    font-size: 0.875rem;
   }
   .package-facts li,
   .inclusions li {
-    font-size: 11px;
+    font-size: 1rem;
   }
   .package-card > .button {
-    font-size: 11px;
+    font-size: 0.875rem;
   }
   .steps {
     grid-template-columns: 1fr;
@@ -2542,14 +2549,14 @@ a {
   }
   .step > span {
     grid-row: span 2;
-    font-size: 43px;
+    font-size: 2.6875rem;
   }
   .step h3 {
-    font-size: 28px;
+    font-size: 1.75rem;
     margin: 0;
   }
   .step p {
-    font-size: 11px;
+    font-size: 1rem;
     max-width: none;
   }
   .gallery-preview-grid {
@@ -2564,7 +2571,7 @@ a {
     grid-row: auto;
   }
   .preview-photo > span {
-    font-size: 10px;
+    font-size: 0.875rem;
     padding: 30px 12px 15px;
     gap: 6px;
   }
@@ -2575,10 +2582,10 @@ a {
     margin-bottom: 25px;
   }
   .review-section h2 {
-    font-size: 39px;
+    font-size: 2.4375rem;
   }
   .review-section > p:not(.eyebrow) {
-    font-size: 11px;
+    font-size: 0.875rem;
   }
   .review-section > p br {
     display: none;
@@ -2591,18 +2598,18 @@ a {
     gap: 30px;
   }
   .faq-section .section-title h2 {
-    font-size: 43px;
+    font-size: 2.6875rem;
   }
   .faq-section > div > p {
-    font-size: 11px;
+    font-size: 1rem;
     margin-block: 20px;
   }
   .faq-item button {
-    font-size: 11px;
+    font-size: 1rem;
     padding: 19px 0;
   }
   .faq-item p {
-    font-size: 11px;
+    font-size: 1rem;
     padding-right: 10px;
   }
   .final-cta {
@@ -2612,15 +2619,15 @@ a {
     padding-block: 55px;
   }
   .final-cta .eyebrow {
-    font-size: 7px;
+    font-size: 0.875rem;
     letter-spacing: 1.3px;
   }
   .final-cta h2 {
-    font-size: 45px;
+    font-size: 2.8125rem;
     line-height: 1.1;
   }
   .final-cta .button {
-    font-size: 10px;
+    font-size: 0.875rem;
     padding: 13px 16px;
     gap: 10px;
   }
@@ -2637,29 +2644,29 @@ a {
     grid-column: 1/-1;
   }
   .footer-brand > p {
-    font-size: 11px;
+    font-size: 1rem;
     margin: 20px 0 15px;
   }
   .footer-main > div:last-child {
     grid-column: 1/-1;
   }
   .footer-main > div:not(.footer-brand) > a {
-    font-size: 11px;
+    font-size: 0.875rem;
     margin-block: 14px;
   }
   .footer-main h3 {
-    font-size: 11px;
+    font-size: 0.875rem;
     margin: 5px 0 18px;
   }
   .footer-bottom {
     flex-direction: column;
     align-items: flex-start;
     gap: 14px;
-    font-size: 8px;
+    font-size: 0.875rem;
     padding-top: 22px;
   }
   .demo-note {
-    font-size: 8px;
+    font-size: 0.875rem;
     line-height: 1.8;
     padding-bottom: 24px;
   }
@@ -2686,7 +2693,7 @@ a {
     justify-content: center;
     gap: 8px;
     color: #e6d7bc;
-    font-size: 10px;
+    font-size: 0.875rem;
   }
   .mobile-booking a:last-child {
     background: var(--gold);
@@ -2703,27 +2710,27 @@ a {
     padding-block: 55px;
   }
   .page-intro h1 {
-    font-size: 47px;
+    font-size: 2.9375rem;
     max-width: 420px;
   }
   .page-intro p:not(.eyebrow) {
-    font-size: 12px;
+    font-size: 0.875rem;
   }
   .service-detail {
     grid-template-columns: 1fr;
     gap: 35px;
   }
   .service-detail h2 {
-    font-size: 42px;
+    font-size: 2.625rem;
   }
   .lead {
-    font-size: 14px !important;
+    font-size: 1rem !important;
   }
   .service-points {
     gap: 16px;
   }
   .service-points li {
-    font-size: 11px;
+    font-size: 1rem;
     line-height: 1.8;
     align-items: flex-start;
   }
@@ -2734,7 +2741,7 @@ a {
     padding: 28px;
   }
   .service-aside p {
-    font-size: 11px;
+    font-size: 1rem;
   }
   .three-grid {
     grid-template-columns: 1fr;
@@ -2745,7 +2752,7 @@ a {
     padding: 25px;
   }
   .three-grid h3 {
-    font-size: 31px;
+    font-size: 1.9375rem;
   }
   .about-copy,
   .contact-grid {
@@ -2753,22 +2760,22 @@ a {
     gap: 32px;
   }
   .about-copy > div > p {
-    font-size: 12px;
+    font-size: 1rem;
   }
   .map-card {
     padding: 25px;
   }
   .map-card h3 {
-    font-size: 30px;
+    font-size: 1.875rem;
   }
   .contact-grid .section-title h2 {
-    font-size: 43px;
+    font-size: 2.6875rem;
   }
   .not-found h1 {
-    font-size: 48px;
+    font-size: 3rem;
   }
   .not-found p {
-    font-size: 12px !important;
+    font-size: 1rem !important;
   }
   .booking-page {
     padding-block: 45px 65px;
@@ -2776,7 +2783,7 @@ a {
     gap: 30px;
   }
   .booking-intro h1 {
-    font-size: 61px;
+    font-size: 3.8125rem;
     margin: 16px 0 18px;
   }
   .booking-intro h1 br {
@@ -2784,7 +2791,7 @@ a {
   }
   .booking-intro > p:not(.eyebrow):not(.fine-print) {
     max-width: none;
-    font-size: 12px;
+    font-size: 0.875rem;
   }
   .booking-photo {
     display: none;
@@ -2793,14 +2800,14 @@ a {
     margin-top: 25px;
   }
   .booking-reassurance h3 {
-    font-size: 25px;
+    font-size: 1.5625rem;
   }
   .booking-reassurance p {
-    font-size: 10px;
+    font-size: 1rem;
     margin-top: 8px;
   }
   .booking-intro > .fine-print {
-    font-size: 9px;
+    font-size: 0.875rem;
     margin-top: 17px;
   }
   .booking-panel {
@@ -2812,18 +2819,18 @@ a {
     padding-bottom: 20px;
   }
   .panel-heading .eyebrow {
-    font-size: 8px;
+    font-size: 0.875rem;
   }
   .panel-heading > span:last-child {
-    font-size: 7px;
+    font-size: 0.875rem;
   }
   .booking-panel legend {
-    font-size: 27px;
+    font-size: 1.6875rem;
     margin-bottom: 19px;
   }
   .booking-panel label,
   .seller-form label {
-    font-size: 10px;
+    font-size: 0.875rem;
   }
   .booking-panel input,
   .booking-panel select,
@@ -2831,7 +2838,7 @@ a {
   .seller-form input,
   .seller-form select,
   .seller-form textarea {
-    font-size: 16px;
+    font-size: 1rem;
     padding: 11px 9px;
     min-height: 47px;
   }
@@ -2846,13 +2853,13 @@ a {
     gap: 9px;
   }
   .booking-submit .button {
-    font-size: 11px;
+    font-size: 0.875rem;
   }
   .booking-success h2 {
-    font-size: 37px;
+    font-size: 2.3125rem;
   }
   .booking-success > .button {
-    font-size: 11px;
+    font-size: 0.875rem;
     padding-inline: 14px;
     gap: 10px;
   }
@@ -2870,23 +2877,23 @@ a {
     padding: 30px 22px;
   }
   .empty-listings h3 {
-    font-size: 33px;
+    font-size: 2.0625rem;
   }
   .empty-listings p {
-    font-size: 11px;
+    font-size: 1rem;
   }
   .empty-listings .button {
-    font-size: 10px;
+    font-size: 0.875rem;
   }
   .gallery-heading {
     padding-top: 55px;
   }
   .gallery-heading h1 {
-    font-size: 49px;
+    font-size: 3.0625rem;
     letter-spacing: -1px;
   }
   .gallery-heading > p:not(.eyebrow) {
-    font-size: 11px;
+    font-size: 0.875rem;
   }
   .gallery-filters {
     gap: 8px;
@@ -2894,7 +2901,7 @@ a {
   }
   .gallery-filters button {
     padding: 10px 12px;
-    font-size: 9px;
+    font-size: 0.875rem;
     min-height: 38px;
   }
   .gallery-masonry {
@@ -2906,11 +2913,11 @@ a {
     margin-bottom: 11px;
   }
   .gallery-tile > span {
-    font-size: 18px;
+    font-size: 1.125rem;
     padding: 25px 11px 13px;
   }
   .gallery-tile small {
-    font-size: 6px;
+    font-size: 0.875rem;
     letter-spacing: 0.7px;
   }
   .gallery-tile > span > svg {
@@ -2926,25 +2933,25 @@ a {
     right: 0;
   }
   .lightbox figcaption {
-    font-size: 11px;
+    font-size: 0.875rem;
     flex-direction: column;
     gap: 8px;
   }
   .lightbox figcaption > span {
-    font-size: 8px;
+    font-size: 0.875rem;
   }
   .lightbox-close {
     right: 10px;
   }
   .prose h1 {
-    font-size: 48px;
+    font-size: 3rem;
     margin-bottom: 30px;
   }
   .prose h2 {
-    font-size: 29px;
+    font-size: 1.8125rem;
   }
   .prose p {
-    font-size: 12px;
+    font-size: 1rem;
   }
   .credits-grid {
     grid-template-columns: 1fr;
@@ -2958,10 +2965,10 @@ a {
     width: calc(100% - 30px);
   }
   .hero h1 {
-    font-size: 64px;
+    font-size: 4rem;
   }
   .hero .button {
-    font-size: 9px;
+    font-size: 0.875rem;
     padding-inline: 12px;
   }
   .header-main .header-book {
@@ -2981,7 +2988,7 @@ a {
   }
   .card-actions > a,
   .card-actions .button {
-    font-size: 9px;
+    font-size: 0.875rem;
   }
   .gallery-masonry {
     columns: 1;
@@ -3005,66 +3012,66 @@ textarea {
   min-width: 0;
 }
 .hero-description {
-  font-size: 14px;
+  font-size: 1rem;
 }
 .section-description,
 .story-copy > p,
 .contact-grid > div > p {
-  font-size: 14px;
+  font-size: 1rem;
 }
 .experience-copy p,
 .step p,
 .three-grid p,
 .service-aside p {
-  font-size: 13px;
+  font-size: 1rem;
 }
 .package-facts li,
 .inclusions li,
 .faq-item p,
 .faq-item button {
-  font-size: 12px;
+  font-size: 1rem;
 }
 .experience-copy .card-actions > a,
 .experience-copy .card-actions .button {
-  font-size: 11px;
+  font-size: 0.875rem;
 }
 .booking-panel label,
 .seller-form label {
-  font-size: 12px;
+  font-size: 0.875rem;
 }
 .booking-submit > p,
 .booking-reassurance p {
-  font-size: 12px;
+  font-size: 1rem;
 }
 .field-hint,
 .field-error,
 .fine-print {
-  font-size: 11px;
+  font-size: 0.875rem;
 }
 .hero > img {
   filter: sepia(0.13) saturate(0.87);
 }
 @media (max-width: 700px) {
   .hero-description {
-    font-size: 12px;
+    font-size: 1rem;
   }
   .section-description,
   .story-copy > p {
-    font-size: 13px;
+    font-size: 1rem;
   }
   .hero h1 {
     font-size: clamp(62px, 18vw, 72px);
   }
   .experience-copy .card-actions > a,
   .experience-copy .card-actions .button {
-    font-size: 10px;
+    font-size: 0.875rem;
   }
   .booking-panel label,
   .seller-form label {
-    font-size: 11px;
+    font-size: 0.875rem;
   }
   .field-hint,
   .fine-print {
-    font-size: 10px;
+    font-size: 0.875rem;
   }
 }

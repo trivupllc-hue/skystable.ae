@@ -123,7 +123,7 @@ export function Experiences({ full = true }: { full?: boolean }) {
                     View Details
                     <ArrowRight size={14} />
                   </Link>
-                  <BookButton service={s.booking} className="text-button">
+                  <BookButton service={s.booking} className="card-book">
                     {i > 3 ? "Enquire" : "Book"} on WhatsApp
                   </BookButton>
                 </div>
@@ -154,10 +154,15 @@ export function Packages() {
         />
         <div className="package-grid">
           {packages.map((p, i) => (
-            <article
-              className={`package-card ${i === 1 ? "featured" : ""}`}
-              key={p.name}
-            >
+            <article className="package-card" key={p.name}>
+              <Photo
+                name={
+                  services.find((service) => service.booking === p.service)
+                    ?.image ?? "lessons"
+                }
+                alt={`${p.name} — illustrative stock photo`}
+                className="package-cover"
+              />
               <span className="package-index">0{i + 1} / THE EXPERIENCE</span>
               <h3>{p.name}</h3>
               <div className="package-price">
@@ -190,7 +195,7 @@ export function Packages() {
               <BookButton
                 service={p.service}
                 notes={`I'm interested in the ${p.name}.`}
-                className={i === 1 ? "" : "button-outline"}
+                className="package-book"
               >
                 Enquire About This Ride
               </BookButton>

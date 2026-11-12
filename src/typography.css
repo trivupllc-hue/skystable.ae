@@ -1,0 +1,323 @@
+/* Shared reading scale for every page, including the homepage. */
+:root {
+  font-size: 100%;
+  --font-serif: Georgia, "Times New Roman", serif;
+}
+body {
+  font-size: 1rem;
+}
+h1,
+h2,
+h3,
+legend {
+  text-wrap: pretty;
+}
+p,
+li {
+  overflow-wrap: break-word;
+}
+.page-intro h1,
+.gallery-heading h1,
+.prose h1,
+.not-found h1 {
+  font-size: clamp(2.25rem, 4.5vw, 4rem);
+  line-height: 1.12;
+}
+.booking-intro h1 {
+  font-size: clamp(2.5rem, 4.5vw, 4rem);
+  line-height: 1.12;
+}
+.section-title h2,
+.faq-section .section-title h2,
+.contact-grid .section-title h2,
+.review-section h2 {
+  font-size: clamp(1.875rem, 3.4vw, 2.75rem);
+  line-height: 1.18;
+}
+.service-detail h2 {
+  font-size: clamp(2rem, 3.6vw, 3rem);
+  line-height: 1.18;
+}
+.experience-copy h3,
+.package-card h3,
+.three-grid h3,
+.service-aside h3 {
+  font-size: clamp(1.5rem, 2.2vw, 1.875rem);
+  line-height: 1.25;
+}
+.eyebrow,
+.reference-eyebrow,
+.reference-side-heading .reference-eyebrow,
+.reference-hero-copy .reference-eyebrow {
+  letter-spacing: 0.11em;
+  flex-wrap: wrap;
+}
+.button,
+.text-button,
+.text-link,
+.header-contact,
+.header-main .header-book,
+.reference-home .button {
+  font-size: 0.9375rem;
+  min-height: 44px;
+}
+.header-main {
+  gap: 18px;
+}
+.header-main nav {
+  gap: 18px;
+}
+.header-main nav a {
+  font-size: 0.875rem;
+}
+.compact-booking input,
+.compact-booking select {
+  height: auto;
+  min-height: 46px;
+  font-size: 1rem;
+}
+.compact-booking form {
+  gap: 14px;
+}
+.compact-booking label,
+.booking-panel label,
+.seller-form label {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+.compact-booking .quick-submit {
+  min-height: 46px;
+  font-size: 0.9375rem;
+}
+.compact-note {
+  line-height: 1.5;
+}
+.reference-service-title {
+  flex-wrap: wrap;
+}
+.reference-service-title h3 {
+  flex: 1 1 110px;
+  font-size: 1rem;
+  line-height: 1.35;
+}
+.reference-service-body p,
+.reference-benefits p,
+.reference-steps p,
+.reference-package-copy > p,
+.reference-side-heading > p:not(.reference-eyebrow) {
+  line-height: 1.6;
+}
+.reference-package-meta strong {
+  font-size: 1.125rem;
+}
+.reference-package-meta,
+.card-actions {
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.reference-package-meta .button,
+.reference-gallery .button,
+.reference-story-invite .button {
+  min-height: 44px;
+  font-size: 0.9375rem;
+}
+.reference-benefits > div > div {
+  flex-wrap: wrap;
+  align-content: start;
+}
+.reference-story-invite {
+  flex-wrap: wrap;
+}
+.reference-image-caption {
+  bottom: 18px;
+  left: 12px;
+  font-size: 0.875rem;
+  background: #fff6e8ec;
+  border-radius: 4px;
+  padding: 3px 6px;
+}
+.reference-hero {
+  padding-bottom: 50px;
+}
+.reference-round-arrow {
+  width: 38px;
+  height: 38px;
+}
+.booking-panel legend {
+  flex-wrap: wrap;
+  font-size: 1.5rem;
+  line-height: 1.35;
+}
+.booking-panel legend > span {
+  min-width: 30px;
+  min-height: 30px;
+}
+.panel-heading {
+  flex-wrap: wrap;
+}
+.package-price {
+  font-size: 1.875rem;
+}
+.package-card h3 {
+  min-height: auto;
+  margin-bottom: 16px;
+}
+.faq-item button,
+.reference-faq-item button {
+  font-weight: 600;
+  line-height: 1.5;
+}
+.footer-main h3 {
+  font-size: 1rem;
+}
+.footer-main > div:not(.footer-brand) > a,
+.footer-main p,
+.footer-brand > p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.footer-bottom,
+.demo-note,
+.location {
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+.footer-bottom {
+  flex-wrap: wrap;
+}
+.prose {
+  max-width: 900px;
+}
+.prose p {
+  font-size: 1.0625rem;
+  line-height: 1.8;
+}
+.gallery-tile > span {
+  line-height: 1.25;
+}
+.gallery-tile small {
+  letter-spacing: 0.06em;
+  line-height: 1.5;
+}
+@media (max-width: 1200px) {
+  .reference-service-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .reference-package-grid {
+    gap: 18px;
+  }
+  .reference-benefits > div {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+  }
+  .reference-benefits > div > div {
+    padding: 0;
+    border: 0;
+  }
+}
+@media (max-width: 1000px) {
+  .booking-page,
+  .selling-grid {
+    grid-template-columns: 1fr;
+  }
+  .booking-photo {
+    display: none;
+  }
+  .booking-intro > p:not(.eyebrow):not(.fine-print) {
+    max-width: 650px;
+  }
+  .reference-how,
+  .reference-stories,
+  .reference-gallery,
+  .reference-faq {
+    grid-template-columns: 1fr;
+  }
+  .reference-side-heading > p:not(.reference-eyebrow) {
+    max-width: 650px;
+  }
+  .reference-side-heading h2 br {
+    display: none;
+  }
+  .reference-package-grid {
+    grid-template-columns: 1fr;
+  }
+  .reference-package-card > img {
+    height: 220px;
+  }
+  .reference-package-meta > span {
+    display: flex;
+  }
+}
+@media (max-width: 700px) {
+  .header-main {
+    gap: 8px;
+  }
+  .header-main .header-book {
+    font-size: 0.875rem;
+    padding-inline: 10px;
+  }
+  .reference-service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .reference-service-title {
+    display: block;
+  }
+  .reference-service-title svg {
+    margin-bottom: 8px;
+  }
+  .reference-benefits > div {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .reference-benefits > div > div:last-child {
+    justify-content: flex-start;
+  }
+  .reference-hero-copy > p:not(.reference-eyebrow),
+  .reference-section-title > p:last-child,
+  .reference-story-invite p,
+  .reference-service-body p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  .compact-booking .quick-date,
+  .compact-booking .quick-time {
+    grid-column: 1 / -1;
+  }
+  .compact-booking input,
+  .compact-booking select {
+    height: auto;
+    min-height: 48px;
+  }
+  .reference-steps {
+    padding: 20px;
+  }
+  .reference-steps h3 {
+    font-size: 1rem;
+  }
+  .booking-panel .form-grid,
+  .booking-panel .form-grid.three {
+    grid-template-columns: 1fr;
+  }
+  .booking-panel label,
+  .seller-form label {
+    font-size: 1rem;
+  }
+  .contact-line > a {
+    font-size: 1.5rem;
+    overflow-wrap: anywhere;
+  }
+  .gallery-masonry {
+    columns: 1;
+  }
+  .mobile-booking a {
+    font-size: 0.875rem;
+    gap: 6px;
+  }
+}
+@media (max-width: 380px) {
+  .reference-service-grid {
+    grid-template-columns: 1fr;
+  }
+  .reference-service-card > img {
+    height: 180px;
+  }
+}

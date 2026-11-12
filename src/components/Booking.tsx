@@ -79,8 +79,7 @@ function BookingForm() {
       <div className="booking-intro">
         <p className="eyebrow">YOUR NEXT CHAPTER</p>
         <h1>
-          Let’s make
-          <br />
+          Let’s make <br />
           <em>it a date.</em>
         </h1>
         <p>

@@ -31,3 +31,12 @@ The homepage form validates required contact fields, total riders and future dat
 Desktop uses six service columns; tablet uses three; mobile uses two. The booking panel stacks on mobile, and the gallery strip scrolls horizontally. FAQ controls expose their expanded state and connect to their answer panels.
 
 The local browser connector is unavailable. All 21 automated form and business-rule tests passed, as did generated-page checks for 14 routes. Full-page desktop (1440px) and mobile (390px) screenshots were reviewed through Firecrawl on the public site. A mobile heading-spacing issue found during that review was corrected. Real-device touch and popup behavior remain unverified.
+
+
+## Shared page design and contact actions
+
+All routes now use Georgia bold headings and DM Sans body text. Body copy and form controls use a 16px baseline; supporting labels use at least 14px. `src/typography.css` supplies the reading scale and responsive spacing. `src/shared-theme.css` applies the homepage’s warm ivory surfaces, soft card shadows, rounded gold gradient buttons, light photo banners and black/gold booking panels to the inner pages. Package cards include the same illustrative photo assets as the homepage.
+
+The floating contact controls follow the owner’s trivup.com reference: circular green WhatsApp with a gentle expanding ring, and a blue Call button stacked above it on screens up to 640px. Call is hidden above 640px. Both use Sky Stable’s confirmed number. The former mobile contact bar is replaced by these controls; Book Now remains in the header and page content. Reduced-motion preferences disable the ring animation.
+
+Desktop homepage and experiences-page screenshots, plus mobile homepage and booking-page screenshots, were reviewed after deployment. That review caught a missing space in the mobile booking heading, which was corrected. Build validation covered all 14 routes, links and local assets; 21 existing tests and lint passed.

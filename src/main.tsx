@@ -4,11 +4,10 @@ import { BrowserRouter } from "react-router-dom";
 import "@fontsource/dm-sans/latin-400.css";
 import "@fontsource/dm-sans/latin-500.css";
 import "@fontsource/dm-sans/latin-600.css";
-import "@fontsource/cormorant-garamond/latin-400.css";
-import "@fontsource/cormorant-garamond/latin-500.css";
-import "@fontsource/cormorant-garamond/latin-400-italic.css";
 import "./styles.css";
 import "./landing.css";
+import "./typography.css";
+import "./shared-theme.css";
 import App from "./App";
 const root = document.getElementById("root")!;
 const app = (

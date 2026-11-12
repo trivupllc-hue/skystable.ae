@@ -35,7 +35,7 @@ Tests cover Dubai date rollover, past dates/times, impossible dates, rider total
 
 ## Before public launch
 
-1. The canonical domain is configured as **https://skystable.ae**. Production builds generate absolute canonical and social preview URLs, indexable pages and a populated sitemap for this domain. Connect this domain to the Vercel project before launch. `VITE_SITE_URL`, if set, overrides `site.seo.baseUrl`; keep it consistent with this domain.
+1. The canonical domain is configured as **https://skystable.ae**. Production builds generate absolute canonical and social preview URLs, indexable pages and a populated sitemap for this domain. Connect this domain to the Cloudflare Pages project before launch. `VITE_SITE_URL`, if set, overrides `site.seo.baseUrl`; keep it consistent with this domain.
 2. Confirm service descriptions and preferred request slots with the owner. Package cards are clearly described as **enquiry ideas**, not confirmed products. Prices are “Request Price” until supplied.
 3. Replace illustrative photography with approved Sky Stable media when available, and update its captions/credits and stock-image disclosures accordingly. Current images are licensed Pexels stock and are explicitly labeled. They are not claimed as Sky Stable facilities, team members or horses.
 4. Add only verified opening hours, social profiles, trainer biographies, reviews and genuine sale listings. Empty values are intentionally omitted or shown as honest empty states.
@@ -120,7 +120,28 @@ git push -u origin main
 
 Authenticate using GitHub’s normal browser or credential-manager flow. Do not paste tokens into project files. `.gitignore` excludes dependencies, build outputs, `.env` files and Vercel local state. Keep `package-lock.json` in Git for reproducible installs. If you already have a repository, skip `git init` and `git remote add` and use the existing remote.
 
-## Deploy to Vercel
+## Deploy to Cloudflare Pages (current hosting plan)
+
+Your domain remains registered at nic.ae. Cloudflare already manages its DNS. Cloudflare Pages can host this static website and deploy updates from the existing GitHub repository; a Vercel account is not needed.
+
+1. In the Cloudflare account that owns `skystable.ae`, open **Workers & Pages → Create application → Pages → Connect to Git**.
+2. Connect the GitHub account **trivupllc-hue**, granting access to **only `skystable.ae`** when selecting repositories. If Cloudflare already has access, select the existing connection.
+3. Select repository **trivupllc-hue/skystable.ae**, project name **skystable**, and production branch **main**.
+4. Set framework preset to **None** (the explicit build command handles Vite and prerendering), build command to **`npm run build`**, build output directory to **`dist`**, and leave the root directory empty.
+5. The committed `.node-version` selects Node.js **24**. If a dashboard environment setting overrides it, set `NODE_VERSION` to `24` in production and preview build settings. No API keys, database or other environment variables are needed.
+6. Select **Save and Deploy**. Wait for a successful deployment, then open the exact `pages.dev` URL Cloudflare provides. Check the homepage, a direct service-page URL and the booking form.
+7. In the Pages project, open **Custom domains → Set up a domain**, enter **`skystable.ae`**, and complete the setup. Because this domain uses Cloudflare DNS in the same account, Pages can create the required DNS record. Wait for the custom domain and HTTPS certificate to become active.
+8. Optionally add `www.skystable.ae` through Custom domains and configure a Cloudflare redirect to `https://skystable.ae`, preserving paths and query strings. The canonical domain is the apex domain.
+
+Do not add a guessed CNAME manually before associating the domain with the Pages project. Use the hostname and records shown for the actual project. Preserve unrelated DNS records.
+
+The `public/_headers` file supplies static response-security and asset-cache headers. The build produces actual HTML for all routes plus `404.html`, so it does not need a blanket SPA fallback. `vercel.json` remains available for an optional future deployment to Vercel; Cloudflare Pages does not use it.
+
+Future pushes to `main` rebuild the site automatically once the Git connection is configured. Verify `https://skystable.ae/robots.txt` and `/sitemap.xml` after launch, then submit the sitemap in Google Search Console.
+
+Official guides: [Git integration](https://developers.cloudflare.com/pages/get-started/git-integration/), [custom domains](https://developers.cloudflare.com/pages/configuration/custom-domains/), [build image and Node version](https://developers.cloudflare.com/pages/configuration/build-image/), [static response headers](https://developers.cloudflare.com/pages/configuration/headers/).
+
+## Optional alternative: Vercel
 
 1. Sign in at [Vercel](https://vercel.com/new), choose **Add New → Project**, and import your GitHub repository.
 2. Select the **Vite** framework preset and Node.js **24.x**. Use the repository root as the Root Directory.
@@ -133,7 +154,7 @@ Authenticate using GitHub’s normal browser or credential-manager flow. Do not 
 
 Official references: [Vite deployment on Vercel](https://vercel.com/docs/frameworks/frontend/vite), [Vercel project configuration](https://vercel.com/docs/project-configuration), [Vite production deployment](https://vite.dev/guide/static-deploy.html).
 
-## Connect a custom domain
+### Custom domain if using Vercel
 
 1. Open the Vercel project → **Settings → Domains** and add the domain you own.
 2. Follow the exact DNS records Vercel shows at your domain registrar. Do not copy IP addresses from an old guide; use the records displayed for your project.
@@ -160,7 +181,9 @@ scripts/verify-build.mjs   Generated-page, metadata, link and asset checks
 scripts/check-launch.ts    Owner configuration checks
 public/images/            Local optimized media and photo source credits
 tests/                    Business-rule and DOM interaction tests
-vercel.json               Vercel deployment settings
+public/_headers           Cloudflare Pages response headers
+.node-version             Node version for Cloudflare builds
+vercel.json               Optional Vercel deployment settings
 ```
 
 No bookings are collected by a server, no email is sent, and no testimonials, credentials, ratings, prices or horse listings are invented. All fonts and images are hosted locally; there are no analytics or embedded map trackers in this initial version.

@@ -2,7 +2,7 @@
 
 The owner selected the supplied “Sky Stable: Horse Riding in Ajman” screenshot on 12 November 2026. The production design follows its black header, flowing gold horse logo, white italic wordmark, sunset hero with right-aligned copy, inset booking panel, six service cards, dark benefits band, featured packages, booking steps, gallery and compact FAQ.
 
-Business content uses the owner's confirmed **Sharjah** location, **+971 55 978 5604** and supplied map pin. Reference prices, ratings, testimonials, trainer credentials and placeholder contact details were not adopted as business facts.
+Business content uses the owner's confirmed **Sharjah** location, **+971 54 442 1098** and supplied map pin. Reference prices, ratings, testimonials, trainer credentials and placeholder contact details were not adopted as business facts.
 
 ## Assets
 

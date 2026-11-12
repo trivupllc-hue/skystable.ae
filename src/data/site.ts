@@ -5,9 +5,9 @@ export const site = {
   location: "Sharjah, UAE",
   city: "Sharjah",
   country: "AE",
-  whatsappNumber: "971559785604",
-  callNumber: "+971559785604",
-  displayPhone: "+971 55 978 5604",
+  whatsappNumber: "971544421098",
+  callNumber: "+971544421098",
+  displayPhone: "+971 54 442 1098",
   mapUrl: "https://maps.app.goo.gl/kfdHwSP7U9QduTgXA",
   streetAddress: "", // Add only the verified street address.
   openingHours: "", // Add confirmed public hours; never infer from preferred ride times.

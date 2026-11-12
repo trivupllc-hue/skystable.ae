@@ -2,7 +2,7 @@
 
 A complete React + Vite + TypeScript website for **Sky Stable, Sharjah, UAE**. It uses Tailwind CSS, custom responsive CSS, Lucide icons, Framer Motion, React Router, React Hook Form and Zod. No backend, database, payment service or paid API is required.
 
-The configured WhatsApp and call number is **+971 55 978 5604**. The owner-supplied [Google Maps pin](https://maps.app.goo.gl/kfdHwSP7U9QduTgXA) is used throughout. The original brief mentioned Ajman; the owner corrected the business location to Sharjah, so primary copy, routes and SEO use Sharjah. Ajman and Dubai appear only as nearby areas.
+The configured WhatsApp and call number is **+971 54 442 1098**. The owner-supplied [Google Maps pin](https://maps.app.goo.gl/kfdHwSP7U9QduTgXA) is used throughout. The original brief mentioned Ajman; the owner corrected the business location to Sharjah, so primary copy, routes and SEO use Sharjah. Ajman and Dubai appear only as nearby areas.
 
 ## Preview locally
 
@@ -50,7 +50,7 @@ Edit **`src/data/site.ts`**. Save, commit and redeploy.
 | Setting                                    | What to enter                                                                                         |
 | ------------------------------------------ | ----------------------------------------------------------------------------------------------------- |
 | `site.name`, `location`, `city`, `country` | Verified business identity and location                                                               |
-| `site.whatsappNumber`                      | Digits only, country code included, e.g. the current `971559785604`                                   |
+| `site.whatsappNumber`                      | Digits only, country code included, e.g. the current `971544421098`                                   |
 | `site.callNumber`                          | International number starting with `+`                                                                |
 | `site.displayPhone`                        | Human-readable version of the same number                                                             |
 | `site.mapUrl`                              | Exact verified Google Maps link                                                                       |

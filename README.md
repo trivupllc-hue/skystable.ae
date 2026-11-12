@@ -134,7 +134,20 @@ npm run deploy
 
 This rebuilds the site, checks the generated pages and uploads them using the pinned Cloudflare Wrangler CLI. It uses your existing Cloudflare login. On a new computer, run `npm ci`, then `npx --yes wrangler@4.160.1 login` and sign into the Cloudflare account that owns this domain before deploying. Never commit credentials.
 
-Save source changes to GitHub with `git add`, `git commit` and `git push` as described above. **GitHub pushes do not automatically deploy yet**; run `npm run deploy` to publish. Automatic deployment can be connected later in Cloudflare's application settings after the owner authorizes the `trivupllc-hue/skystable.ae` GitHub integration.
+### Automatic publishing from GitHub
+
+The workflow `.github/workflows/deploy.yml` checks every pull request and push to `main`. Once the one-time credential setup below is complete, successful pushes to `main` automatically publish to Cloudflare and verify the live homepage and booking page. Pull requests only run checks. Failed checks stop publication. The workflow can also be run manually from the repository's Actions tab.
+
+**One-time activation:** a Cloudflare deployment token must be saved as a GitHub repository secret. Until it exists, the workflow runs checks but explicitly skips publication and reports the missing secret in its summary; a green check alone does not mean the site was deployed.
+
+1. Open [Cloudflare API Tokens](https://dash.cloudflare.com/profile/api-tokens), select **Create Token**, then **Edit Cloudflare Workers**. Name it `Sky Stable GitHub deployment`.
+2. Scope account resources to the account that owns `skystable.ae` and zone resources to **only `skystable.ae`**. The account ID in this repository is `ad41879524803fc71144f7e0164c1ee5`. Keep the Workers deployment permissions from the template, then create the token.
+3. Open [New GitHub repository secret](https://github.com/trivupllc-hue/skystable.ae/settings/secrets/actions/new). Name it **`CLOUDFLARE_API_TOKEN`**, paste the token into the secret value, and save. Do not put it in source files or chat. The account ID is already configured and needs no separate secret.
+4. Open [GitHub Actions](https://github.com/trivupllc-hue/skystable.ae/actions/workflows/deploy.yml), choose **Run workflow** on `main`, and confirm the **Publish to Cloudflare** and live verification steps succeed.
+
+After activation, save source changes with `git add`, `git commit` and `git push`; no separate deployment command is required. `npm run deploy` remains available for manual recovery. Do not configure a second Cloudflare Git build for the same branch while this workflow is active, since that would create duplicate deployments.
+
+Official guides: [Cloudflare with GitHub Actions](https://developers.cloudflare.com/workers/ci-cd/external-cicd/github-actions/), [GitHub repository secrets](https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets).
 
 The `public/_headers` file supplies response-security and hashed-asset cache headers. All routes have actual HTML, so no blanket SPA fallback is needed. The committed `.node-version` selects Node.js 24 for compatible build environments. `vercel.json` is optional and is not used by Cloudflare.
 
@@ -183,6 +196,7 @@ scripts/check-launch.ts    Owner configuration checks
 public/images/            Local optimized media and photo source credits
 tests/                    Business-rule and DOM interaction tests
 public/_headers           Cloudflare static response headers
+.github/workflows/deploy.yml  Checks and automatic deployment after token setup
 wrangler.jsonc            Cloudflare deployment and custom domains
 .node-version             Node version for Cloudflare builds
 vercel.json               Optional Vercel deployment settings
